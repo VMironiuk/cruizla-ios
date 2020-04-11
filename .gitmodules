@@ -1,0 +1,3 @@
+[submodule "omim"]
+	path = omim
+	url = https://github.com/mapsme/omim
