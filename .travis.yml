@@ -1,0 +1,12 @@
+os: osx
+
+addons:
+  homebrew:
+    packages:
+      - qt
+      - boost
+      - mesalib-glw
+
+script:
+  - ./Setup.sh
+  #- omim/tools/unix/build_omim.sh -d

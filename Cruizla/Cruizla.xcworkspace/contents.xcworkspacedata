@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../omim/xcode/common-debug.xcconfig">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/common-release.xcconfig">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/common.xcconfig">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/std">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/pyhelpers">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "3party">
+      <FileRef
+         location = "group:../omim/xcode/agg/agg.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/alohalitics/alohalitics.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/bsdiff/bsdiff.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/expat/expat.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/freetype/freetype.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/gflags/gflags.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/icu/icu.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/jansson/jansson.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/minizip/minizip.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/oauthcpp/oauthcpp.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/open_location_code/open_location_code.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/opening_hours/opening_hours.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/osrm/osrm.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/protobuf/protobuf.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/pugixml/pugixml.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/sdf_image/sdf_image.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/stb_image/stb_image.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/succinct/succinct.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/tess2/tess2.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../omim/xcode/vulkan_wrapper/vulkan_wrapper.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:../omim/xcode/ge0/ge0.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/base/base.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/coding/coding.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/descriptions/descriptions.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/drape/drape.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/drape_frontend/drape_frontend.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/shaders/shaders.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/editor/editor.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/geometry/geometry.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/generator/generator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/mwm_diff/mwm_diff.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/generator_tool/generator_tool.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/indexer/indexer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/local_ads/local_ads.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/map/map.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/mapshot/mapshot.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/metrics/metrics.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/openlr/openlr.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/partners_api/partners_api.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/platform/platform.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/routing/routing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/routing_common/routing_common.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/search/search.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/storage/storage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/traffic/traffic.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/tracking/tracking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/transit/transit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/qtMapsMe/qtMapsMe.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/ugc/ugc.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/software_renderer/software_renderer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/kml/kml.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../omim/xcode/web_api/web_api.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cruizla.xcodeproj">
+   </FileRef>
+</Workspace>
