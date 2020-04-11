@@ -151,6 +151,8 @@ double getExactDPI(double contentScaleFactor) {
   f.SetGraphicsContextInitializationHandler([self]() {
     [self setGraphicContextInitialized:YES];
   });
+  
+  [self setPresentAvailable:YES];
 }
 
 - (void)createDrapeEngineWithWidth:(int)width height:(int)height {

@@ -3,12 +3,7 @@
 
 #include "map/framework.hpp"
 
-/**
- Creates framework at first access
- */
+/// Creates framework at first access
 Framework& GetFramework();
-
-/**
- Releases framework resources
- */
+/// Releases framework resources
 void DeleteFramework();

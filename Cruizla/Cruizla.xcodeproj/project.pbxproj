@@ -44,6 +44,7 @@
 		803625E5232D247800EF4EC3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E04232D0BE300DFF680 /* iAd.framework */; };
 		803625E6232D248600EF4EC3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E06232D0BEF00DFF680 /* MobileCoreServices.framework */; };
 		803625E7232D249100EF4EC3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E08232D0BF900DFF680 /* AdSupport.framework */; };
+		803625E8232D249B00EF4EC3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E0A232D0C0600DFF680 /* StoreKit.framework */; };
 		803625EA232D24A500EF4EC3 /* librouting_common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625E9232D24A500EF4EC3 /* librouting_common.a */; };
 		803625EC232D24B000EF4EC3 /* libicu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625EB232D24B000EF4EC3 /* libicu.a */; };
 		803625EE232D24C200EF4EC3 /* liblocal_ads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625ED232D24C200EF4EC3 /* liblocal_ads.a */; };
@@ -68,14 +69,12 @@
 		8038FD1F23242EEF0099B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8038FD1D23242EEF0099B4BC /* LaunchScreen.storyboard */; };
 		8038FD2A23242EEF0099B4BC /* CruizlaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038FD2923242EEF0099B4BC /* CruizlaTests.swift */; };
 		8038FD3523242EEF0099B4BC /* CruizlaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038FD3423242EEF0099B4BC /* CruizlaUITests.swift */; };
-		8069911F23F84326003682FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069911E23F84325003682FE /* SceneDelegate.swift */; };
-		8069912123F84344003682FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069912023F84344003682FE /* MapViewController.swift */; };
-		8069912423F8437A003682FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8069912223F8437A003682FE /* Main.storyboard */; };
-		8069912F23F84CFE003682FE /* libge0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069912E23F84CFE003682FE /* libge0.a */; };
-		8069913123F84D3B003682FE /* minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913023F84D3B003682FE /* minizip.framework */; };
-		8069913223F84D3B003682FE /* minizip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913023F84D3B003682FE /* minizip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8069913523F851CC003682FE /* minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913423F851CC003682FE /* minizip.framework */; };
+		8069913623F851CC003682FE /* minizip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913423F851CC003682FE /* minizip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8069913923F85219003682FE /* libge0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913823F85219003682FE /* libge0.a */; };
 		808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 808B4DCC236D9934000D2DD8 /* Framework.cpp */; };
 		808CBA6C236DABF400868CF1 /* libweb_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 808CBA6B236DABF400868CF1 /* libweb_api.a */; };
+		808DCF422364730200B73793 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DCF412364730200B73793 /* MapView.swift */; };
 		8091C751239BD268001E7A1F /* ugc_migration in Resources */ = {isa = PBXBuildFile; fileRef = 8091C750239BD268001E7A1F /* ugc_migration */; };
 		8091C759239BD287001E7A1F /* 02_droidsans-fallback.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8091C752239BD286001E7A1F /* 02_droidsans-fallback.ttf */; };
 		8091C75A239BD287001E7A1F /* 05_khmeros.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8091C753239BD286001E7A1F /* 05_khmeros.ttf */; };
@@ -127,7 +126,9 @@
 		8091C7B6239BD389001E7A1F /* transit_colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8091C7AD239BD389001E7A1F /* transit_colors.txt */; };
 		8091C7B7239BD389001E7A1F /* unicode_blocks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8091C7AE239BD389001E7A1F /* unicode_blocks.txt */; };
 		809570042356193800B2F0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809570032356193800B2F0A5 /* AppDelegate.swift */; };
-		809A4AE52438770F00D4565B /* CRZDrapeFrontendAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 809A4AE42438770F00D4565B /* CRZDrapeFrontendAdapter.mm */; };
+		809570062356196500B2F0A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809570052356196500B2F0A5 /* SceneDelegate.swift */; };
+		809570082356197300B2F0A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809570072356197300B2F0A5 /* ContentView.swift */; };
+		8095700B235619C000B2F0A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8095700A235619C000B2F0A5 /* Preview Assets.xcassets */; };
 		80AC96B82364350E00347AFF /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96B72364350E00347AFF /* EAGLView.mm */; };
 		80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96BD23643B9400347AFF /* IosOGLContextFactory.mm */; };
 		80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96C023643C6C00347AFF /* IosOGLContext.mm */; };
@@ -151,13 +152,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8069913323F84D3B003682FE /* Embed Frameworks */ = {
+		8069913723F851CC003682FE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8069913223F84D3B003682FE /* minizip.framework in Embed Frameworks */,
+				8069913623F851CC003682FE /* minizip.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,11 +221,8 @@
 		8038FD3023242EEF0099B4BC /* CruizlaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CruizlaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8038FD3423242EEF0099B4BC /* CruizlaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruizlaUITests.swift; sourceTree = "<group>"; };
 		8038FD3623242EEF0099B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8069911E23F84325003682FE /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8069912023F84344003682FE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		8069912323F8437A003682FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8069912E23F84CFE003682FE /* libge0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libge0.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8069913023F84D3B003682FE /* minizip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = minizip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8069913423F851CC003682FE /* minizip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = minizip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8069913823F85219003682FE /* libge0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libge0.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		80841D89232D070B00DFF680 /* common-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "common-debug.xcconfig"; path = "../omim/xcode/common-debug.xcconfig"; sourceTree = "<group>"; };
 		80841D8A232D070B00DFF680 /* common-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "common-release.xcconfig"; path = "../omim/xcode/common-release.xcconfig"; sourceTree = "<group>"; };
 		80841D8C232D0B5F00DFF680 /* libagg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libagg.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +288,7 @@
 		80841E04232D0BE300DFF680 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		80841E06232D0BEF00DFF680 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		80841E08232D0BF900DFF680 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		80841E0A232D0C0600DFF680 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		80841E0C232D0C1300DFF680 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		80841E0E232D0C1D00DFF680 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		80841E10232D0C2E00DFF680 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
@@ -299,6 +298,7 @@
 		808B4DCC236D9934000D2DD8 /* Framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Framework.cpp; sourceTree = "<group>"; };
 		808B4DCD236D9934000D2DD8 /* Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Framework.h; sourceTree = "<group>"; };
 		808CBA6B236DABF400868CF1 /* libweb_api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libweb_api.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		808DCF412364730200B73793 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		8091C750239BD268001E7A1F /* ugc_migration */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ugc_migration; path = ../omim/data/ugc_migration; sourceTree = "<group>"; };
 		8091C752239BD286001E7A1F /* 02_droidsans-fallback.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02_droidsans-fallback.ttf"; path = "../omim/data/02_droidsans-fallback.ttf"; sourceTree = "<group>"; };
 		8091C753239BD286001E7A1F /* 05_khmeros.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 05_khmeros.ttf; path = ../omim/data/05_khmeros.ttf; sourceTree = "<group>"; };
@@ -350,8 +350,9 @@
 		8091C7AD239BD389001E7A1F /* transit_colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = transit_colors.txt; path = ../omim/data/transit_colors.txt; sourceTree = "<group>"; };
 		8091C7AE239BD389001E7A1F /* unicode_blocks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = unicode_blocks.txt; path = ../omim/data/unicode_blocks.txt; sourceTree = "<group>"; };
 		809570032356193800B2F0A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		809A4AE32438770F00D4565B /* CRZDrapeFrontendAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZDrapeFrontendAdapter.h; sourceTree = "<group>"; };
-		809A4AE42438770F00D4565B /* CRZDrapeFrontendAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZDrapeFrontendAdapter.mm; sourceTree = "<group>"; };
+		809570052356196500B2F0A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		809570072356197300B2F0A5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8095700A235619C000B2F0A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80AC96B62364350E00347AFF /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		80AC96B72364350E00347AFF /* EAGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
 		80AC96BC23643B4A00347AFF /* IosOGLContextFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosOGLContextFactory.h; sourceTree = "<group>"; };
@@ -371,6 +372,7 @@
 				80362604232D263600EF4EC3 /* CarPlay.framework in Frameworks */,
 				80362603232D262C00EF4EC3 /* libdescriptions.a in Frameworks */,
 				80362601232D25F400EF4EC3 /* libmetrics.a in Frameworks */,
+				8069913923F85219003682FE /* libge0.a in Frameworks */,
 				803625FF232D25A400EF4EC3 /* MetalPerformanceShaders.framework in Frameworks */,
 				803625FE232D259900EF4EC3 /* Metal.framework in Frameworks */,
 				803625FD232D258E00EF4EC3 /* MetalKit.framework in Frameworks */,
@@ -384,9 +386,9 @@
 				803625F1232D24E200EF4EC3 /* libugc.a in Frameworks */,
 				803625EF232D24D600EF4EC3 /* UserNotifications.framework in Frameworks */,
 				803625EE232D24C200EF4EC3 /* liblocal_ads.a in Frameworks */,
-				8069913123F84D3B003682FE /* minizip.framework in Frameworks */,
 				803625EC232D24B000EF4EC3 /* libicu.a in Frameworks */,
 				803625EA232D24A500EF4EC3 /* librouting_common.a in Frameworks */,
+				803625E8232D249B00EF4EC3 /* StoreKit.framework in Frameworks */,
 				803625E7232D249100EF4EC3 /* AdSupport.framework in Frameworks */,
 				803625E6232D248600EF4EC3 /* MobileCoreServices.framework in Frameworks */,
 				803625E5232D247800EF4EC3 /* iAd.framework in Frameworks */,
@@ -414,6 +416,7 @@
 				803625BB232D235200EF4EC3 /* liboauthcpp.a in Frameworks */,
 				803625B9232D234700EF4EC3 /* libplatform.a in Frameworks */,
 				803625B7232D233900EF4EC3 /* libprotobuf.a in Frameworks */,
+				8069913523F851CC003682FE /* minizip.framework in Frameworks */,
 				803625B5232D232500EF4EC3 /* librouting.a in Frameworks */,
 				803625B3232D231A00EF4EC3 /* libstb_image.a in Frameworks */,
 				803625B1232D230500EF4EC3 /* libsearch.a in Frameworks */,
@@ -422,7 +425,6 @@
 				803625AB232D22DA00EF4EC3 /* libdrape_frontend.a in Frameworks */,
 				803625A9232D22CF00EF4EC3 /* libshaders.a in Frameworks */,
 				803625A7232D22C300EF4EC3 /* libdrape.a in Frameworks */,
-				8069912F23F84CFE003682FE /* libge0.a in Frameworks */,
 				803625A5232D22B800EF4EC3 /* libpartners_api.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +451,6 @@
 			children = (
 				808CBA6D236DAC3500868CF1 /* FrameworkAdapter */,
 				80792F5D235AEF120078E0AE /* PlatformAdapter */,
-				809A4AE2243876B800D4565B /* DrapeFrontendAdapter */,
 			);
 			path = CoreAdapters;
 			sourceTree = "<group>";
@@ -484,9 +485,9 @@
 				80AC96B42364309100347AFF /* Objc */,
 				80AC96B5236430CE00347AFF /* Swift */,
 				8038FD1B23242EEF0099B4BC /* Assets.xcassets */,
-				8069912223F8437A003682FE /* Main.storyboard */,
 				8038FD1D23242EEF0099B4BC /* LaunchScreen.storyboard */,
 				8038FD2023242EEF0099B4BC /* Info.plist */,
+				809570092356198000B2F0A5 /* Preview Content */,
 			);
 			path = Cruizla;
 			sourceTree = "<group>";
@@ -521,8 +522,8 @@
 		80841D8B232D0B5F00DFF680 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8069913023F84D3B003682FE /* minizip.framework */,
-				8069912E23F84CFE003682FE /* libge0.a */,
+				8069913823F85219003682FE /* libge0.a */,
+				8069913423F851CC003682FE /* minizip.framework */,
 				808CBA6B236DABF400868CF1 /* libweb_api.a */,
 				80362605232D264100EF4EC3 /* libvulkan_wrapper.a */,
 				80362602232D262C00EF4EC3 /* libdescriptions.a */,
@@ -572,6 +573,7 @@
 				80841E12232D0C2F00DFF680 /* MetalPerformanceShaders.framework */,
 				80841E0E232D0C1D00DFF680 /* GLKit.framework */,
 				80841E0C232D0C1300DFF680 /* UserNotifications.framework */,
+				80841E0A232D0C0600DFF680 /* StoreKit.framework */,
 				80841E08232D0BF900DFF680 /* AdSupport.framework */,
 				80841E06232D0BEF00DFF680 /* MobileCoreServices.framework */,
 				80841E04232D0BE300DFF680 /* iAd.framework */,
@@ -642,8 +644,8 @@
 		808CBA6D236DAC3500868CF1 /* FrameworkAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				808B4DCD236D9934000D2DD8 /* Framework.h */,
 				808B4DCC236D9934000D2DD8 /* Framework.cpp */,
+				808B4DCD236D9934000D2DD8 /* Framework.h */,
 			);
 			path = FrameworkAdapter;
 			sourceTree = "<group>";
@@ -705,13 +707,12 @@
 			name = ExternalResources;
 			sourceTree = "<group>";
 		};
-		809A4AE2243876B800D4565B /* DrapeFrontendAdapter */ = {
+		809570092356198000B2F0A5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				809A4AE32438770F00D4565B /* CRZDrapeFrontendAdapter.h */,
-				809A4AE42438770F00D4565B /* CRZDrapeFrontendAdapter.mm */,
+				8095700A235619C000B2F0A5 /* Preview Assets.xcassets */,
 			);
-			path = DrapeFrontendAdapter;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		80AC96B42364309100347AFF /* Objc */ = {
@@ -728,8 +729,9 @@
 			isa = PBXGroup;
 			children = (
 				809570032356193800B2F0A5 /* AppDelegate.swift */,
-				8069911E23F84325003682FE /* SceneDelegate.swift */,
-				8069912023F84344003682FE /* MapViewController.swift */,
+				809570052356196500B2F0A5 /* SceneDelegate.swift */,
+				809570072356197300B2F0A5 /* ContentView.swift */,
+				808DCF412364730200B73793 /* MapView.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -765,7 +767,7 @@
 				8038FD0D23242EEE0099B4BC /* Sources */,
 				8038FD0E23242EEE0099B4BC /* Frameworks */,
 				8038FD0F23242EEE0099B4BC /* Resources */,
-				8069913323F84D3B003682FE /* Embed Frameworks */,
+				8069913723F851CC003682FE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -876,7 +878,6 @@
 				8091C7B4239BD389001E7A1F /* WorldCoasts.mwm in Resources */,
 				8091C79B239BD338001E7A1F /* resources-mdpi_clear in Resources */,
 				8091C759239BD287001E7A1F /* 02_droidsans-fallback.ttf in Resources */,
-				8069912423F8437A003682FE /* Main.storyboard in Resources */,
 				8091C7B3239BD389001E7A1F /* ugc_types.csv in Resources */,
 				8091C75E239BD287001E7A1F /* 07_roboto_medium.ttf in Resources */,
 				8091C77E239BD301001E7A1F /* fonts_whitelist.txt in Resources */,
@@ -909,6 +910,7 @@
 				8091C79C239BD338001E7A1F /* resources-xhdpi_dark in Resources */,
 				8091C789239BD301001E7A1F /* fonts_blacklist.txt in Resources */,
 				8091C799239BD338001E7A1F /* resources-xxxhdpi_clear in Resources */,
+				8095700B235619C000B2F0A5 /* Preview Assets.xcassets in Resources */,
 				8038FD1C23242EEF0099B4BC /* Assets.xcassets in Resources */,
 				8091C77A239BD301001E7A1F /* opening_hours_how_to_edit.html in Resources */,
 				8091C79A239BD338001E7A1F /* resources-xhdpi_clear in Resources */,
@@ -939,14 +941,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */,
-				809A4AE52438770F00D4565B /* CRZDrapeFrontendAdapter.mm in Sources */,
-				8069911F23F84326003682FE /* SceneDelegate.swift in Sources */,
+				808DCF422364730200B73793 /* MapView.swift in Sources */,
 				809570042356193800B2F0A5 /* AppDelegate.swift in Sources */,
 				80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */,
 				808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */,
 				803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */,
-				8069912123F84344003682FE /* MapViewController.swift in Sources */,
+				809570082356197300B2F0A5 /* ContentView.swift in Sources */,
 				80AC96B82364350E00347AFF /* EAGLView.mm in Sources */,
+				809570062356196500B2F0A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,14 +990,6 @@
 				8038FD1E23242EEF0099B4BC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		8069912223F8437A003682FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8069912323F8437A003682FE /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1153,7 +1147,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = appiarysolutions.com.Cruizla;
+				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla";
 				PRODUCT_MODULE_NAME = Cruizla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Objc/Cruizla-Bridging-Header.h";
@@ -1177,7 +1171,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = appiarysolutions.com.Cruizla;
+				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla";
 				PRODUCT_MODULE_NAME = Cruizla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Objc/Cruizla-Bridging-Header.h";
