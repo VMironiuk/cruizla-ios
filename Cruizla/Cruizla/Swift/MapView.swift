@@ -9,10 +9,8 @@
 import SwiftUI
 
 struct MapView: UIViewRepresentable {
-  private var glView: EAGLView = EAGLView(frame: .zero)
-  
   func makeUIView(context: Context) -> EAGLView {
-    glView
+    EAGLView(frame: .zero)
   }
   
   func updateUIView(_ uiView: EAGLView, context: Context) {
