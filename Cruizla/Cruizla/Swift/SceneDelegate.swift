@@ -14,10 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
   var window: UIWindow?
   
-  private var mapViewController: MapViewController! {
-    return self.window?.rootViewController as? MapViewController
-  }
-  
   // MARK: - UISceneDelegate
 
   func scene(
@@ -39,20 +35,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // scene connects.
     // The scene may re-connect later, as its session was not neccessarily discarded
     // (see `application:didDiscardSceneSessions` instead).
-    self.mapViewController.terminate()
   }
 
   func sceneDidBecomeActive(_ scene: UIScene) {
     // Called when the scene has moved from an inactive state to an active state.
     // Use this method to restart any tasks that were paused (or not yet started) when the scene was
     // inactive.
-    self.mapViewController.setFocus(true)
   }
 
   func sceneWillResignActive(_ scene: UIScene) {
     // Called when the scene will move from an active state to an inactive state.
     // This may occur due to temporary interruptions (ex. an incoming phone call).
-    self.mapViewController.setFocus(false)
   }
 
   func sceneWillEnterForeground(_ scene: UIScene) {
@@ -65,7 +58,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Use this method to save data, release shared resources, and store enough scene-specific state
     // information to restore the scene back to its current state.
   }
-
-
 }
 
