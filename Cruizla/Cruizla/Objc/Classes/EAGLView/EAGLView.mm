@@ -58,7 +58,7 @@ double getExactDPI(double contentScaleFactor) {
 }
 } //  namespace
 
-#pragma mark - Custom Accessories
+#pragma mark - Custom Accessors
 
 - (CGSize)pixelSize {
   CGSize const s = self.bounds.size;
@@ -91,7 +91,7 @@ double getExactDPI(double contentScaleFactor) {
   return [CAEAGLLayer class];
 }
 
-#pragma mark - Initialization
+#pragma mark - Lifecycle
 
 - (id)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
@@ -106,8 +106,6 @@ double getExactDPI(double contentScaleFactor) {
   }
   return self;
 }
-
-#pragma mark - Lifecycle
 
 - (void)addSubview:(UIView *)view {
   [super addSubview:view];
@@ -178,6 +176,8 @@ double getExactDPI(double contentScaleFactor) {
 
 #pragma mark - Private
 
+#pragma mark - Initialisation Helper
+
 - (void)p_initialize {
   m_presentAvailable = false;
   m_lastViewSize = CGRectZero;
@@ -198,7 +198,10 @@ double getExactDPI(double contentScaleFactor) {
   });
   
   [self setPresentAvailable:YES];
+  [self p_registerNotifications];
 }
+
+#pragma mark - Drape Engine Creation
 
 - (void)createDrapeEngineWithWidth:(int)width height:(int)height {
   LOG(LINFO, ("CreateDrapeEngine Started", width, height, m_apiVersion));
@@ -217,6 +220,8 @@ double getExactDPI(double contentScaleFactor) {
   self->_drapeEngineCreated = YES;
   LOG(LINFO, ("CreateDrapeEngine Finished"));
 }
+
+#pragma mark - Map Navigation Helpers
 
 - (BOOL)p_hasForceTouch {
   return self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
@@ -286,6 +291,34 @@ double getExactDPI(double contentScaleFactor) {
   
   Framework& f = GetFramework();
   f.TouchEvent(e);
+}
+
+#pragma mark - Notifications Handling
+
+- (void)p_registerNotifications {
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(p_onSceneDidDisconnectNotification:)
+                                               name:UISceneDidDisconnectNotification object:nil];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(p_onSceneDidActivateNotification:)
+                                               name:UISceneDidActivateNotification object:nil];
+
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(p_onSceneWillDeactivateNotification:)
+                                               name:UISceneWillDeactivateNotification object:nil];
+}
+
+- (void)p_onSceneDidDisconnectNotification:(NSNotification *)notification {
+  [self deallocateNative];
+}
+
+- (void)p_onSceneDidActivateNotification:(NSNotification *)notification {
+  [self setPresentAvailable:YES];
+}
+
+- (void)p_onSceneWillDeactivateNotification:(NSNotification *)notification {
+  [self setPresentAvailable:NO];
 }
 
 @end
