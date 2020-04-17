@@ -166,7 +166,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8036259F232D1A0100EF4EC3 /* Cruizla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cruizla-Bridging-Header.h"; sourceTree = "<group>"; };
+		802CF9852449AA58008041B7 /* Cruizla-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cruizla-Bridging-Header.h"; sourceTree = "<group>"; };
 		803625A0232D1A0200EF4EC3 /* CRZPlatformAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZPlatformAdapter.h; sourceTree = "<group>"; };
 		803625A1232D1A0200EF4EC3 /* CRZPlatformAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZPlatformAdapter.mm; sourceTree = "<group>"; };
 		803625A4232D22B800EF4EC3 /* libpartners_api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpartners_api.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -446,13 +446,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8036259E232D19D700EF4EC3 /* CoreAdapters */ = {
+		802CF9842449A9F9008041B7 /* CoreApi */ = {
 			isa = PBXGroup;
 			children = (
 				808CBA6D236DAC3500868CF1 /* FrameworkAdapter */,
 				80792F5D235AEF120078E0AE /* PlatformAdapter */,
 			);
-			path = CoreAdapters;
+			path = CoreApi;
 			sourceTree = "<group>";
 		};
 		8038FD0823242EEE0099B4BC = {
@@ -482,8 +482,13 @@
 		8038FD1323242EEE0099B4BC /* Cruizla */ = {
 			isa = PBXGroup;
 			children = (
-				80AC96B42364309100347AFF /* Objc */,
-				80AC96B5236430CE00347AFF /* Swift */,
+				802CF9842449A9F9008041B7 /* CoreApi */,
+				80AC96BB23643AA000347AFF /* EAGLView */,
+				809570032356193800B2F0A5 /* AppDelegate.swift */,
+				809570052356196500B2F0A5 /* SceneDelegate.swift */,
+				809570072356197300B2F0A5 /* ContentView.swift */,
+				808DCF412364730200B73793 /* MapView.swift */,
+				802CF9852449AA58008041B7 /* Cruizla-Bridging-Header.h */,
 				8038FD1B23242EEF0099B4BC /* Assets.xcassets */,
 				8038FD1D23242EEF0099B4BC /* LaunchScreen.storyboard */,
 				8038FD2023242EEF0099B4BC /* Info.plist */,
@@ -713,35 +718,6 @@
 				8095700A235619C000B2F0A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		80AC96B42364309100347AFF /* Objc */ = {
-			isa = PBXGroup;
-			children = (
-				8036259E232D19D700EF4EC3 /* CoreAdapters */,
-				80AC96B92364352600347AFF /* Classes */,
-				8036259F232D1A0100EF4EC3 /* Cruizla-Bridging-Header.h */,
-			);
-			path = Objc;
-			sourceTree = "<group>";
-		};
-		80AC96B5236430CE00347AFF /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				809570032356193800B2F0A5 /* AppDelegate.swift */,
-				809570052356196500B2F0A5 /* SceneDelegate.swift */,
-				809570072356197300B2F0A5 /* ContentView.swift */,
-				808DCF412364730200B73793 /* MapView.swift */,
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
-		80AC96B92364352600347AFF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				80AC96BB23643AA000347AFF /* EAGLView */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		80AC96BB23643AA000347AFF /* EAGLView */ = {
@@ -1150,7 +1126,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla";
 				PRODUCT_MODULE_NAME = Cruizla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Objc/Cruizla-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Cruizla-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1174,7 +1150,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla";
 				PRODUCT_MODULE_NAME = Cruizla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Objc/Cruizla-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Cruizla-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
