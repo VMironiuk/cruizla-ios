@@ -150,7 +150,7 @@ double getExactDPI(double contentScaleFactor) {
   m_factory = make_unique_dp<dp::ThreadSafeFactory>(
     new IosOGLContextFactory((CAEAGLLayer *)self.layer, m_apiVersion, m_presentAvailable));
   
-  [self createDrapeEngineWithWidth:s.x height:s.y];
+  [self p_createDrapeEngineWithWidth:s.x height:s.y];
 }
 
 - (void)deallocateNative {
@@ -203,7 +203,7 @@ double getExactDPI(double contentScaleFactor) {
 
 #pragma mark - Drape Engine Creation
 
-- (void)createDrapeEngineWithWidth:(int)width height:(int)height {
+- (void)p_createDrapeEngineWithWidth:(int)width height:(int)height {
   LOG(LINFO, ("CreateDrapeEngine Started", width, height, m_apiVersion));
   CHECK(m_factory != nullptr, ());
   
