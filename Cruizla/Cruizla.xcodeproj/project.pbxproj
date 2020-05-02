@@ -127,7 +127,6 @@
 		8091C7B6239BD389001E7A1F /* transit_colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8091C7AD239BD389001E7A1F /* transit_colors.txt */; };
 		8091C7B7239BD389001E7A1F /* unicode_blocks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8091C7AE239BD389001E7A1F /* unicode_blocks.txt */; };
 		809570042356193800B2F0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809570032356193800B2F0A5 /* AppDelegate.swift */; };
-		809A4AE52438770F00D4565B /* CRZDrapeFrontendAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 809A4AE42438770F00D4565B /* CRZDrapeFrontendAdapter.mm */; };
 		80AC96B82364350E00347AFF /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96B72364350E00347AFF /* EAGLView.mm */; };
 		80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96BD23643B9400347AFF /* IosOGLContextFactory.mm */; };
 		80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96C023643C6C00347AFF /* IosOGLContext.mm */; };
@@ -350,8 +349,6 @@
 		8091C7AD239BD389001E7A1F /* transit_colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = transit_colors.txt; path = ../omim/data/transit_colors.txt; sourceTree = "<group>"; };
 		8091C7AE239BD389001E7A1F /* unicode_blocks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = unicode_blocks.txt; path = ../omim/data/unicode_blocks.txt; sourceTree = "<group>"; };
 		809570032356193800B2F0A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		809A4AE32438770F00D4565B /* CRZDrapeFrontendAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZDrapeFrontendAdapter.h; sourceTree = "<group>"; };
-		809A4AE42438770F00D4565B /* CRZDrapeFrontendAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZDrapeFrontendAdapter.mm; sourceTree = "<group>"; };
 		80AC96B62364350E00347AFF /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		80AC96B72364350E00347AFF /* EAGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
 		80AC96BC23643B4A00347AFF /* IosOGLContextFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosOGLContextFactory.h; sourceTree = "<group>"; };
@@ -449,7 +446,6 @@
 			children = (
 				808CBA6D236DAC3500868CF1 /* FrameworkAdapter */,
 				80792F5D235AEF120078E0AE /* PlatformAdapter */,
-				809A4AE2243876B800D4565B /* DrapeFrontendAdapter */,
 			);
 			path = CoreApi;
 			sourceTree = "<group>";
@@ -709,15 +705,6 @@
 			name = ExternalResources;
 			sourceTree = "<group>";
 		};
-		809A4AE2243876B800D4565B /* DrapeFrontendAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				809A4AE32438770F00D4565B /* CRZDrapeFrontendAdapter.h */,
-				809A4AE42438770F00D4565B /* CRZDrapeFrontendAdapter.mm */,
-			);
-			path = DrapeFrontendAdapter;
-			sourceTree = "<group>";
-		};
 		80AC96BB23643AA000347AFF /* EAGLView */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,7 +902,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */,
-				809A4AE52438770F00D4565B /* CRZDrapeFrontendAdapter.mm in Sources */,
 				8069911F23F84326003682FE /* SceneDelegate.swift in Sources */,
 				809570042356193800B2F0A5 /* AppDelegate.swift in Sources */,
 				80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */,
