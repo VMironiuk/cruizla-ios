@@ -5,7 +5,7 @@ Cruizla iOS — offline maps and navigator for iOS based on MAPS.ME core.
 Use `git clone --recursive` to clone the project and all submodules, or run `git submodule update --init --recursive` if you forgot to use `--recursive` option during cloning the project.
 
 ## Building the project
-* Run `configure.sh` script from the root directory of the `Cruizla-iOS` project. This script runs `omim/configure.sh` script to configure the `omim` project and also applies `setup_omim.patch` to adjust the `omim` project to further using by the `Cruizla-iOS` project.
+* Run `./Setup.sh` script from the root directory of the `Cruizla-iOS` project. This script runs `omim/configure.sh` script to configure the `omim` project and also applies `setup_omim.patch` to adjust the `omim` project to further using by the `Cruizla-iOS` project.
 * Open `Cruizla/Cruizla.xcworkspace`.
 * In Xcode select `Cruizla` scheme.
 * Build the project.
