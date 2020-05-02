@@ -30,19 +30,18 @@ class CruizlaUITests: XCTestCase {
     // the class.
   }
   
-  func testExample() {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
+  func testMapInteraction() {
     let element = XCUIApplication()
-      .children(matching: .window)
-      .element(boundBy: 0)
-      .children(matching: .other)
-      .element.children(matching: .other)
-      .element.children(matching: .other)
-      .element.children(matching: .other).element
-    element/*@START_MENU_TOKEN@*/.swipeLeft()/*[[".swipeDown()",".swipeLeft()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-    element.swipeUp()
+      .children(matching: .window).element(boundBy: 0)
+      .children(matching: .other).element
+      .children(matching: .other).element
+      .children(matching: .other).element
+      .children(matching: .other).element
+    
+    element.swipeLeft()
+    element.swipeLeft()
+    element.swipeRight()
+    element.swipeRight()
     element.tap()
     element.tap()
   }
