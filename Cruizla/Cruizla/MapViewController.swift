@@ -29,36 +29,6 @@ class MapViewController: UIViewController {
     }
   }
   
-  // MARK: - Map Navigation
-  
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let safeEvent = event {
-      CRZDrapeFrontendAdapter.shared().send(
-        .touchDown, withTouches: touches, event: safeEvent, mapView: self.mapView)
-    }
-  }
-  
-  override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let safeEvent = event {
-      CRZDrapeFrontendAdapter.shared().send(
-        .touchMove, withTouches: nil, event: safeEvent, mapView: self.mapView)
-    }
-  }
-  
-  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let safeEvent = event {
-      CRZDrapeFrontendAdapter.shared().send(
-        .touchUp, withTouches: touches, event: safeEvent, mapView: self.mapView)
-    }
-  }
-  
-  override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if let safeEvent = event {
-      CRZDrapeFrontendAdapter.shared().send(
-        .touchCancel, withTouches: touches, event: safeEvent, mapView: self.mapView)
-    }
-  }
-  
   // MARK: - Private
   
   // MARK: - Notifications Handling
