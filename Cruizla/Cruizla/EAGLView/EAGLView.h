@@ -20,10 +20,29 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) CGSize pixelSize;
 @property(nonatomic, readonly) BOOL graphicContextInitialized;
 
+/**
+ 
+ */
 - (void)createDrapeEngine;
+
+/**
+ 
+ */
 - (void)deallocateNative;
+
+/**
+ 
+ */
 - (void)setPresentAvailable:(BOOL)available;
+
+/**
+ 
+ */
 - (void)updateVisualScaleTo:(CGFloat)visualScale;
+
+/**
+ 
+ */
 - (void)updateVisualScaleToMain;
 
 @end
