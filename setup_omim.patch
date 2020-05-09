@@ -33,7 +33,7 @@ index 68518196ab..4c2b31b1d6 100644
  {
  inline double VisualScale(double exactDensityDPI)
 diff --git a/drape/vulkan/vulkan_layers.cpp b/drape/vulkan/vulkan_layers.cpp
-index 556be4a1fa..33e1f8a5b5 100755
+index 556be4a1fa..2aab2e45e9 100755
 --- a/drape/vulkan/vulkan_layers.cpp
 +++ b/drape/vulkan/vulkan_layers.cpp
 @@ -115,8 +115,8 @@ std::string GetReportObjectTypeString(VkDebugReportObjectTypeEXT objectType)
@@ -47,8 +47,30 @@ index 556be4a1fa..33e1f8a5b5 100755
      return "INDIRECT_COMMANDS_LAYOUT_NVX";
    case VK_DEBUG_REPORT_OBJECT_TYPE_VALIDATION_CACHE_EXT_EXT: return "VALIDATION_CACHE_EXT";
    case VK_DEBUG_REPORT_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_EXT: return "SAMPLER_YCBCR_CONVERSION";
+@@ -124,7 +124,7 @@ std::string GetReportObjectTypeString(VkDebugReportObjectTypeEXT objectType)
+     return "DESCRIPTOR_UPDATE_TEMPLATE";
+   case VK_DEBUG_REPORT_OBJECT_TYPE_ACCELERATION_STRUCTURE_NV_EXT:
+     return "ACCELERATION_STRUCTURE_NV";
+-  case VK_DEBUG_REPORT_OBJECT_TYPE_RANGE_SIZE_EXT: return "RANGE_SIZE";
++//  case VK_DEBUG_REPORT_OBJECT_TYPE_RANGE_SIZE_EXT: return "RANGE_SIZE";
+   case VK_DEBUG_REPORT_OBJECT_TYPE_MAX_ENUM_EXT: return "MAX_ENUM";
+   }
+   UNREACHABLE();
+diff --git a/drape/vulkan/vulkan_utils.cpp b/drape/vulkan/vulkan_utils.cpp
+index 02062cfbb8..2c9443453b 100644
+--- a/drape/vulkan/vulkan_utils.cpp
++++ b/drape/vulkan/vulkan_utils.cpp
+@@ -50,7 +50,7 @@ std::string GetVulkanResultString(VkResult result)
+   case VK_ERROR_NOT_PERMITTED_EXT: return "VK_ERROR_NOT_PERMITTED_EXT";
+   case VK_ERROR_OUT_OF_POOL_MEMORY_KHR: return "VK_ERROR_OUT_OF_POOL_MEMORY_KHR";
+   case VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR: return "VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR";
+-  case VK_RESULT_RANGE_SIZE: return "VK_RESULT_RANGE_SIZE";
++//  case VK_RESULT_RANGE_SIZE: return "VK_RESULT_RANGE_SIZE";
+   case VK_RESULT_MAX_ENUM: return "VK_RESULT_MAX_ENUM";
+   }
+   UNREACHABLE();
 diff --git a/xcode/common.xcconfig b/xcode/common.xcconfig
-index ed9ee5a678..c109bea932 100644
+index 2587517989..9a142dc7e1 100644
 --- a/xcode/common.xcconfig
 +++ b/xcode/common.xcconfig
 @@ -5,6 +5,10 @@ OMIM_ROOT = $(PROJECT_DIR)/../..
