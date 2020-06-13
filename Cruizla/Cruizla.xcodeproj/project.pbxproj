@@ -44,7 +44,6 @@
 		803625E5232D247800EF4EC3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E04232D0BE300DFF680 /* iAd.framework */; };
 		803625E6232D248600EF4EC3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E06232D0BEF00DFF680 /* MobileCoreServices.framework */; };
 		803625E7232D249100EF4EC3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E08232D0BF900DFF680 /* AdSupport.framework */; };
-		803625E8232D249B00EF4EC3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80841E0A232D0C0600DFF680 /* StoreKit.framework */; };
 		803625EA232D24A500EF4EC3 /* librouting_common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625E9232D24A500EF4EC3 /* librouting_common.a */; };
 		803625EC232D24B000EF4EC3 /* libicu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625EB232D24B000EF4EC3 /* libicu.a */; };
 		803625EE232D24C200EF4EC3 /* liblocal_ads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625ED232D24C200EF4EC3 /* liblocal_ads.a */; };
@@ -132,6 +131,7 @@
 		80AC96B82364350E00347AFF /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96B72364350E00347AFF /* EAGLView.mm */; };
 		80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96BD23643B9400347AFF /* IosOGLContextFactory.mm */; };
 		80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80AC96C023643C6C00347AFF /* IosOGLContext.mm */; };
+		80E929E22494E0B1007D840B /* CRZLocationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80E929E12494E0B1007D840B /* CRZLocationManager.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,7 +288,6 @@
 		80841E04232D0BE300DFF680 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		80841E06232D0BEF00DFF680 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		80841E08232D0BF900DFF680 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		80841E0A232D0C0600DFF680 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		80841E0C232D0C1300DFF680 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		80841E0E232D0C1D00DFF680 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		80841E10232D0C2E00DFF680 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
@@ -359,6 +358,8 @@
 		80AC96BD23643B9400347AFF /* IosOGLContextFactory.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IosOGLContextFactory.mm; sourceTree = "<group>"; };
 		80AC96BF23643C5000347AFF /* IosOGLContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosOGLContext.h; sourceTree = "<group>"; };
 		80AC96C023643C6C00347AFF /* IosOGLContext.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IosOGLContext.mm; sourceTree = "<group>"; };
+		80E929E02494E0B1007D840B /* CRZLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZLocationManager.h; sourceTree = "<group>"; };
+		80E929E12494E0B1007D840B /* CRZLocationManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZLocationManager.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,7 +389,6 @@
 				803625EE232D24C200EF4EC3 /* liblocal_ads.a in Frameworks */,
 				803625EC232D24B000EF4EC3 /* libicu.a in Frameworks */,
 				803625EA232D24A500EF4EC3 /* librouting_common.a in Frameworks */,
-				803625E8232D249B00EF4EC3 /* StoreKit.framework in Frameworks */,
 				803625E7232D249100EF4EC3 /* AdSupport.framework in Frameworks */,
 				803625E6232D248600EF4EC3 /* MobileCoreServices.framework in Frameworks */,
 				803625E5232D247800EF4EC3 /* iAd.framework in Frameworks */,
@@ -484,6 +484,7 @@
 			children = (
 				802CF9842449A9F9008041B7 /* CoreApi */,
 				80AC96BB23643AA000347AFF /* EAGLView */,
+				80E929E32494E0C5007D840B /* LocationManager */,
 				809570032356193800B2F0A5 /* AppDelegate.swift */,
 				809570052356196500B2F0A5 /* SceneDelegate.swift */,
 				809570072356197300B2F0A5 /* ContentView.swift */,
@@ -578,7 +579,6 @@
 				80841E12232D0C2F00DFF680 /* MetalPerformanceShaders.framework */,
 				80841E0E232D0C1D00DFF680 /* GLKit.framework */,
 				80841E0C232D0C1300DFF680 /* UserNotifications.framework */,
-				80841E0A232D0C0600DFF680 /* StoreKit.framework */,
 				80841E08232D0BF900DFF680 /* AdSupport.framework */,
 				80841E06232D0BEF00DFF680 /* MobileCoreServices.framework */,
 				80841E04232D0BE300DFF680 /* iAd.framework */,
@@ -731,6 +731,15 @@
 				80AC96C023643C6C00347AFF /* IosOGLContext.mm */,
 			);
 			path = EAGLView;
+			sourceTree = "<group>";
+		};
+		80E929E32494E0C5007D840B /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				80E929E02494E0B1007D840B /* CRZLocationManager.h */,
+				80E929E12494E0B1007D840B /* CRZLocationManager.mm */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -922,6 +931,7 @@
 				80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */,
 				808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */,
 				803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */,
+				80E929E22494E0B1007D840B /* CRZLocationManager.mm in Sources */,
 				809570082356197300B2F0A5 /* ContentView.swift in Sources */,
 				80AC96B82364350E00347AFF /* EAGLView.mm in Sources */,
 				809570062356196500B2F0A5 /* SceneDelegate.swift in Sources */,
@@ -1123,7 +1133,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla";
+				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla-SwiftUI";
 				PRODUCT_MODULE_NAME = Cruizla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Cruizla-Bridging-Header.h";
@@ -1147,7 +1157,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla";
+				PRODUCT_BUNDLE_IDENTIFIER = "rio-engineyro.com.Cruizla-SwiftUI";
 				PRODUCT_MODULE_NAME = Cruizla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cruizla/Cruizla-Bridging-Header.h";
