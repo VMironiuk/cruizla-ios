@@ -68,6 +68,7 @@
 		8038FD1F23242EEF0099B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8038FD1D23242EEF0099B4BC /* LaunchScreen.storyboard */; };
 		8038FD2A23242EEF0099B4BC /* CruizlaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038FD2923242EEF0099B4BC /* CruizlaTests.swift */; };
 		8038FD3523242EEF0099B4BC /* CruizlaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038FD3423242EEF0099B4BC /* CruizlaUITests.swift */; };
+		804AF88C248E63A2002E126E /* CRZLocationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 804AF88B248E63A2002E126E /* CRZLocationManager.mm */; };
 		8069911F23F84326003682FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069911E23F84325003682FE /* SceneDelegate.swift */; };
 		8069912123F84344003682FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069912023F84344003682FE /* MapViewController.swift */; };
 		8069912423F8437A003682FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8069912223F8437A003682FE /* Main.storyboard */; };
@@ -164,7 +165,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8036259F232D1A0100EF4EC3 /* Cruizla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Cruizla-Bridging-Header.h"; path = "Objc/Cruizla-Bridging-Header.h"; sourceTree = "<group>"; };
 		803625A0232D1A0200EF4EC3 /* CRZPlatformAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZPlatformAdapter.h; sourceTree = "<group>"; };
 		803625A1232D1A0200EF4EC3 /* CRZPlatformAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZPlatformAdapter.mm; sourceTree = "<group>"; };
 		803625A4232D22B800EF4EC3 /* libpartners_api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpartners_api.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +219,9 @@
 		8038FD3023242EEF0099B4BC /* CruizlaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CruizlaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8038FD3423242EEF0099B4BC /* CruizlaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruizlaUITests.swift; sourceTree = "<group>"; };
 		8038FD3623242EEF0099B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		804AF88A248E63A2002E126E /* CRZLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZLocationManager.h; sourceTree = "<group>"; };
+		804AF88B248E63A2002E126E /* CRZLocationManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZLocationManager.mm; sourceTree = "<group>"; };
+		804AF88E248E66E3002E126E /* Cruizla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cruizla-Bridging-Header.h"; sourceTree = "<group>"; };
 		8069911E23F84325003682FE /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8069912023F84344003682FE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8069912323F8437A003682FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -479,10 +482,11 @@
 			children = (
 				802CF97F2449A52D008041B7 /* CoreApi */,
 				80AC96BB23643AA000347AFF /* EAGLView */,
+				804AF88D248E63AC002E126E /* LoocationManager */,
 				8069912023F84344003682FE /* MapViewController.swift */,
 				809570032356193800B2F0A5 /* AppDelegate.swift */,
 				8069911E23F84325003682FE /* SceneDelegate.swift */,
-				8036259F232D1A0100EF4EC3 /* Cruizla-Bridging-Header.h */,
+				804AF88E248E66E3002E126E /* Cruizla-Bridging-Header.h */,
 				8038FD1B23242EEF0099B4BC /* Assets.xcassets */,
 				8069912223F8437A003682FE /* Main.storyboard */,
 				8038FD1D23242EEF0099B4BC /* LaunchScreen.storyboard */,
@@ -507,6 +511,15 @@
 				8038FD3623242EEF0099B4BC /* Info.plist */,
 			);
 			path = CruizlaUITests;
+			sourceTree = "<group>";
+		};
+		804AF88D248E63AC002E126E /* LoocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				804AF88A248E63A2002E126E /* CRZLocationManager.h */,
+				804AF88B248E63A2002E126E /* CRZLocationManager.mm */,
+			);
+			path = LoocationManager;
 			sourceTree = "<group>";
 		};
 		80792F5D235AEF120078E0AE /* PlatformAdapter */ = {
@@ -904,6 +917,7 @@
 				80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */,
 				8069911F23F84326003682FE /* SceneDelegate.swift in Sources */,
 				809570042356193800B2F0A5 /* AppDelegate.swift in Sources */,
+				804AF88C248E63A2002E126E /* CRZLocationManager.mm in Sources */,
 				80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */,
 				808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */,
 				803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */,
