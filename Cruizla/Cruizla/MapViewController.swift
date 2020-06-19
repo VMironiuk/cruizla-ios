@@ -29,6 +29,18 @@ class MapViewController: UIViewController {
     }
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    let firstLaunchChecker = FirstLaunchChecker(
+      userDefaults: .standard,
+      key: K.UserDefaultsKey.firstLaunchKey)
+    
+    if firstLaunchChecker.isFirstLaunch {
+      CRZFrameworkAdapter.sharedFramework().switchMyPositionNextMode()
+    }
+  }
+  
   // MARK: - Private
   
   // MARK: - Notifications Handling

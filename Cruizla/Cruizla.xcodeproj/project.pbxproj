@@ -68,6 +68,9 @@
 		8038FD1F23242EEF0099B4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8038FD1D23242EEF0099B4BC /* LaunchScreen.storyboard */; };
 		8038FD2A23242EEF0099B4BC /* CruizlaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038FD2923242EEF0099B4BC /* CruizlaTests.swift */; };
 		8038FD3523242EEF0099B4BC /* CruizlaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8038FD3423242EEF0099B4BC /* CruizlaUITests.swift */; };
+		8046A0D8249C98FB00D5D4F6 /* CRZFrameworkAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8046A0D7249C98FB00D5D4F6 /* CRZFrameworkAdapter.mm */; };
+		8046A0DA249CA43200D5D4F6 /* FirstLaunchChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046A0D9249CA43200D5D4F6 /* FirstLaunchChecker.swift */; };
+		8046A0DF249CA85300D5D4F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046A0DE249CA85300D5D4F6 /* Constants.swift */; };
 		804AF88C248E63A2002E126E /* CRZLocationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 804AF88B248E63A2002E126E /* CRZLocationManager.mm */; };
 		8069911F23F84326003682FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069911E23F84325003682FE /* SceneDelegate.swift */; };
 		8069912123F84344003682FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069912023F84344003682FE /* MapViewController.swift */; };
@@ -219,6 +222,10 @@
 		8038FD3023242EEF0099B4BC /* CruizlaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CruizlaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8038FD3423242EEF0099B4BC /* CruizlaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruizlaUITests.swift; sourceTree = "<group>"; };
 		8038FD3623242EEF0099B4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8046A0D6249C98FB00D5D4F6 /* CRZFrameworkAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZFrameworkAdapter.h; sourceTree = "<group>"; };
+		8046A0D7249C98FB00D5D4F6 /* CRZFrameworkAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZFrameworkAdapter.mm; sourceTree = "<group>"; };
+		8046A0D9249CA43200D5D4F6 /* FirstLaunchChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchChecker.swift; sourceTree = "<group>"; };
+		8046A0DE249CA85300D5D4F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		804AF88A248E63A2002E126E /* CRZLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZLocationManager.h; sourceTree = "<group>"; };
 		804AF88B248E63A2002E126E /* CRZLocationManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZLocationManager.mm; sourceTree = "<group>"; };
 		804AF88E248E66E3002E126E /* Cruizla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cruizla-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -483,6 +490,8 @@
 				802CF97F2449A52D008041B7 /* CoreApi */,
 				80AC96BB23643AA000347AFF /* EAGLView */,
 				804AF88D248E63AC002E126E /* LoocationManager */,
+				8046A0E0249CAD4700D5D4F6 /* Helpers */,
+				8046A0E1249CAD5000D5D4F6 /* Constants */,
 				8069912023F84344003682FE /* MapViewController.swift */,
 				809570032356193800B2F0A5 /* AppDelegate.swift */,
 				8069911E23F84325003682FE /* SceneDelegate.swift */,
@@ -511,6 +520,22 @@
 				8038FD3623242EEF0099B4BC /* Info.plist */,
 			);
 			path = CruizlaUITests;
+			sourceTree = "<group>";
+		};
+		8046A0E0249CAD4700D5D4F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8046A0D9249CA43200D5D4F6 /* FirstLaunchChecker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8046A0E1249CAD5000D5D4F6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8046A0DE249CA85300D5D4F6 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		804AF88D248E63AC002E126E /* LoocationManager */ = {
@@ -657,6 +682,8 @@
 			children = (
 				808B4DCD236D9934000D2DD8 /* Framework.h */,
 				808B4DCC236D9934000D2DD8 /* Framework.cpp */,
+				8046A0D6249C98FB00D5D4F6 /* CRZFrameworkAdapter.h */,
+				8046A0D7249C98FB00D5D4F6 /* CRZFrameworkAdapter.mm */,
 			);
 			path = FrameworkAdapter;
 			sourceTree = "<group>";
@@ -915,6 +942,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */,
+				8046A0DA249CA43200D5D4F6 /* FirstLaunchChecker.swift in Sources */,
 				8069911F23F84326003682FE /* SceneDelegate.swift in Sources */,
 				809570042356193800B2F0A5 /* AppDelegate.swift in Sources */,
 				804AF88C248E63A2002E126E /* CRZLocationManager.mm in Sources */,
@@ -922,7 +950,9 @@
 				808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */,
 				803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */,
 				8069912123F84344003682FE /* MapViewController.swift in Sources */,
+				8046A0D8249C98FB00D5D4F6 /* CRZFrameworkAdapter.mm in Sources */,
 				80AC96B82364350E00347AFF /* EAGLView.mm in Sources */,
+				8046A0DF249CA85300D5D4F6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
