@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,24 +10,135 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Cruizla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Cruizla" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUa-DQ-UwB" customClass="EAGLView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-zW-y3s" userLabel="Bottom Menu View">
+                                <rect key="frame" x="8" y="690" width="359" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1Bm-vt-UH3"/>
+                                    <constraint firstAttribute="height" constant="80" id="2oM-o5-ncm"/>
+                                    <constraint firstAttribute="height" constant="80" id="FUf-0N-mJz"/>
+                                    <constraint firstAttribute="width" constant="360" id="PyQ-vX-IYA"/>
+                                    <constraint firstAttribute="width" constant="80" id="s3X-R3-BYK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorIB">
+                                        <color key="value" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Bm-vt-UH3"/>
+                                        <exclude reference="2oM-o5-ncm"/>
+                                        <exclude reference="FUf-0N-mJz"/>
+                                        <exclude reference="PyQ-vX-IYA"/>
+                                        <exclude reference="s3X-R3-BYK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="s3X-R3-BYK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="1Bm-vt-UH3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2oM-o5-ncm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="FUf-0N-mJz"/>
+                                        <include reference="PyQ-vX-IYA"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pUa-DQ-UwB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5NW-yC-k3t"/>
+                            <constraint firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="CFN-gh-BLc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="DPM-ZW-aT0"/>
+                            <constraint firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="EvD-aB-eSb"/>
+                            <constraint firstItem="FFH-zW-y3s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="K3H-2p-wle"/>
+                            <constraint firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="RgP-RX-Yuu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="Ufq-o8-pHR"/>
+                            <constraint firstItem="FFH-zW-y3s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Zpp-9e-rxQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="bdG-h4-LfL"/>
                             <constraint firstAttribute="trailing" secondItem="pUa-DQ-UwB" secondAttribute="trailing" id="cT3-6a-Q7j"/>
                             <constraint firstItem="pUa-DQ-UwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="emG-bK-myg"/>
+                            <constraint firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="fvQ-P7-0xg"/>
                             <constraint firstAttribute="bottom" secondItem="pUa-DQ-UwB" secondAttribute="bottom" id="lnx-bU-K3T"/>
+                            <constraint firstItem="FFH-zW-y3s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="rXc-Tt-VhC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="se7-JW-wlq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DPM-ZW-aT0"/>
+                                <exclude reference="Ufq-o8-pHR"/>
+                                <exclude reference="bdG-h4-LfL"/>
+                                <exclude reference="se7-JW-wlq"/>
+                                <exclude reference="CFN-gh-BLc"/>
+                                <exclude reference="EvD-aB-eSb"/>
+                                <exclude reference="K3H-2p-wle"/>
+                                <exclude reference="RgP-RX-Yuu"/>
+                                <exclude reference="Zpp-9e-rxQ"/>
+                                <exclude reference="fvQ-P7-0xg"/>
+                                <exclude reference="rXc-Tt-VhC"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ufq-o8-pHR"/>
+                                <include reference="K3H-2p-wle"/>
+                                <include reference="RgP-RX-Yuu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="DPM-ZW-aT0"/>
+                                <include reference="EvD-aB-eSb"/>
+                                <include reference="rXc-Tt-VhC"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="se7-JW-wlq"/>
+                                <include reference="Zpp-9e-rxQ"/>
+                                <include reference="fvQ-P7-0xg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="bdG-h4-LfL"/>
+                                <include reference="CFN-gh-BLc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="pUa-DQ-UwB" id="Rl7-su-150"/>
@@ -35,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.5" y="134.765625"/>
         </scene>
     </scenes>
 </document>

@@ -78,6 +78,7 @@
 		8069912F23F84CFE003682FE /* libge0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069912E23F84CFE003682FE /* libge0.a */; };
 		8069913123F84D3B003682FE /* minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913023F84D3B003682FE /* minizip.framework */; };
 		8069913223F84D3B003682FE /* minizip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913023F84D3B003682FE /* minizip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		806D638624A63D5800D3331A /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D638524A63D5800D3331A /* CALayer.swift */; };
 		808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 808B4DCC236D9934000D2DD8 /* Framework.cpp */; };
 		808CBA6C236DABF400868CF1 /* libweb_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 808CBA6B236DABF400868CF1 /* libweb_api.a */; };
 		8091C751239BD268001E7A1F /* ugc_migration in Resources */ = {isa = PBXBuildFile; fileRef = 8091C750239BD268001E7A1F /* ugc_migration */; };
@@ -234,6 +235,7 @@
 		8069912323F8437A003682FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8069912E23F84CFE003682FE /* libge0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libge0.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8069913023F84D3B003682FE /* minizip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = minizip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		806D638524A63D5800D3331A /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		80841D89232D070B00DFF680 /* common-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "common-debug.xcconfig"; path = "../omim/xcode/common-debug.xcconfig"; sourceTree = "<group>"; };
 		80841D8A232D070B00DFF680 /* common-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "common-release.xcconfig"; path = "../omim/xcode/common-release.xcconfig"; sourceTree = "<group>"; };
 		80841D8C232D0B5F00DFF680 /* libagg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libagg.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -487,6 +489,7 @@
 		8038FD1323242EEE0099B4BC /* Cruizla */ = {
 			isa = PBXGroup;
 			children = (
+				806D637B24A629E400D3331A /* Extensions */,
 				802CF97F2449A52D008041B7 /* CoreApi */,
 				80AC96BB23643AA000347AFF /* EAGLView */,
 				804AF88D248E63AC002E126E /* LoocationManager */,
@@ -545,6 +548,14 @@
 				804AF88B248E63A2002E126E /* CRZLocationManager.mm */,
 			);
 			path = LoocationManager;
+			sourceTree = "<group>";
+		};
+		806D637B24A629E400D3331A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				806D638524A63D5800D3331A /* CALayer.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		80792F5D235AEF120078E0AE /* PlatformAdapter */ = {
@@ -951,6 +962,7 @@
 				803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */,
 				8069912123F84344003682FE /* MapViewController.swift in Sources */,
 				8046A0D8249C98FB00D5D4F6 /* CRZFrameworkAdapter.mm in Sources */,
+				806D638624A63D5800D3331A /* CALayer.swift in Sources */,
 				80AC96B82364350E00347AFF /* EAGLView.mm in Sources */,
 				8046A0DF249CA85300D5D4F6 /* Constants.swift in Sources */,
 			);
