@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomMenuView" customModule="Cruizla" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="hGX-Ar-Z57"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" propertyAccessControl="all">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nXK-Tm-oSm">
+                    <rect key="frame" x="8" y="8" width="344" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HL-7b-AK8" userLabel="Search View">
+                            <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q5R-qX-Ehr">
+                                    <rect key="frame" x="23" y="13" width="40" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="1Yt-ly-Prq"/>
+                                        <constraint firstAttribute="height" constant="40" id="KTu-yZ-E5m"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="q5R-qX-Ehr" firstAttribute="centerY" secondItem="9HL-7b-AK8" secondAttribute="centerY" id="fYv-kD-uXg"/>
+                                <constraint firstItem="q5R-qX-Ehr" firstAttribute="centerX" secondItem="9HL-7b-AK8" secondAttribute="centerX" id="n8D-yf-Fpp"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLU-nc-Peb" userLabel="Compass View">
+                            <rect key="frame" x="86" y="0.0" width="86" height="64"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safari" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="apD-V5-4X7">
+                                    <rect key="frame" x="23" y="12.5" width="40" height="39"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="ATw-rc-fbL"/>
+                                        <constraint firstAttribute="height" constant="40" id="VVN-Mo-eNy"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="apD-V5-4X7" firstAttribute="centerY" secondItem="SLU-nc-Peb" secondAttribute="centerY" id="UYs-s4-lSa"/>
+                                <constraint firstItem="apD-V5-4X7" firstAttribute="centerX" secondItem="SLU-nc-Peb" secondAttribute="centerX" id="dFS-qj-mgB"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-V2-gxH" userLabel="Location View">
+                            <rect key="frame" x="172" y="0.0" width="86" height="64"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-q0-6S6">
+                                    <rect key="frame" x="23" y="12.5" width="40" height="39"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="VPI-Hc-4N4"/>
+                                        <constraint firstAttribute="height" constant="40" id="n4S-rR-fBG"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerY" secondItem="HLX-V2-gxH" secondAttribute="centerY" id="FSE-28-0g6"/>
+                                <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerX" secondItem="HLX-V2-gxH" secondAttribute="centerX" id="rew-dP-xbq"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d75-hG-3D3" userLabel="Menu View">
+                            <rect key="frame" x="258" y="0.0" width="86" height="64"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-dc-TqO">
+                                    <rect key="frame" x="23" y="17" width="40" height="30.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Yn0-vx-Aed"/>
+                                        <constraint firstAttribute="width" constant="40" id="eTp-lU-p1F"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="hj2-dc-TqO" firstAttribute="centerX" secondItem="d75-hG-3D3" secondAttribute="centerX" id="AWA-cK-GXw"/>
+                                <constraint firstItem="hj2-dc-TqO" firstAttribute="centerY" secondItem="d75-hG-3D3" secondAttribute="centerY" id="als-ZA-LFS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                    <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
+                    <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
+                    <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Bottom Menu View Color"/>
+            <constraints>
+                <constraint firstItem="nXK-Tm-oSm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="A5l-T8-1JL"/>
+                <constraint firstAttribute="trailing" secondItem="nXK-Tm-oSm" secondAttribute="trailing" constant="8" id="FnK-j8-g60"/>
+                <constraint firstItem="nXK-Tm-oSm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="eeV-F9-OCd"/>
+                <constraint firstAttribute="bottom" secondItem="nXK-Tm-oSm" secondAttribute="bottom" constant="8" id="pGL-KL-dHB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorIB">
+                    <color key="value" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                    <integer key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                    <size key="value" width="0.0" height="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.59999999999999" y="152.92353823088456"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="safari" catalog="system" width="128" height="121"/>
+        <namedColor name="Bottom Menu View Color">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

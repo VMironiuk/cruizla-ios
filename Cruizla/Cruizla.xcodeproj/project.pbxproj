@@ -79,6 +79,8 @@
 		8069913123F84D3B003682FE /* minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913023F84D3B003682FE /* minizip.framework */; };
 		8069913223F84D3B003682FE /* minizip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8069913023F84D3B003682FE /* minizip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		806D638624A63D5800D3331A /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D638524A63D5800D3331A /* CALayer.swift */; };
+		8071F02B24A73B5C0008CA75 /* BottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8071F02A24A73B5C0008CA75 /* BottomMenuView.swift */; };
+		8071F02D24A73B7C0008CA75 /* BottomMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8071F02C24A73B7C0008CA75 /* BottomMenuView.xib */; };
 		808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 808B4DCC236D9934000D2DD8 /* Framework.cpp */; };
 		808CBA6C236DABF400868CF1 /* libweb_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 808CBA6B236DABF400868CF1 /* libweb_api.a */; };
 		8091C751239BD268001E7A1F /* ugc_migration in Resources */ = {isa = PBXBuildFile; fileRef = 8091C750239BD268001E7A1F /* ugc_migration */; };
@@ -236,6 +238,8 @@
 		8069912E23F84CFE003682FE /* libge0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libge0.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8069913023F84D3B003682FE /* minizip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = minizip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		806D638524A63D5800D3331A /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		8071F02A24A73B5C0008CA75 /* BottomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenuView.swift; sourceTree = "<group>"; };
+		8071F02C24A73B7C0008CA75 /* BottomMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomMenuView.xib; sourceTree = "<group>"; };
 		80841D89232D070B00DFF680 /* common-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "common-debug.xcconfig"; path = "../omim/xcode/common-debug.xcconfig"; sourceTree = "<group>"; };
 		80841D8A232D070B00DFF680 /* common-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "common-release.xcconfig"; path = "../omim/xcode/common-release.xcconfig"; sourceTree = "<group>"; };
 		80841D8C232D0B5F00DFF680 /* libagg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libagg.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -495,6 +499,7 @@
 				804AF88D248E63AC002E126E /* LoocationManager */,
 				8046A0E0249CAD4700D5D4F6 /* Helpers */,
 				8046A0E1249CAD5000D5D4F6 /* Constants */,
+				8071F02824A73AFF0008CA75 /* UI */,
 				8069912023F84344003682FE /* MapViewController.swift */,
 				809570032356193800B2F0A5 /* AppDelegate.swift */,
 				8069911E23F84325003682FE /* SceneDelegate.swift */,
@@ -556,6 +561,23 @@
 				806D638524A63D5800D3331A /* CALayer.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8071F02824A73AFF0008CA75 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8071F02924A73B1F0008CA75 /* BottomMenuView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8071F02924A73B1F0008CA75 /* BottomMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				8071F02A24A73B5C0008CA75 /* BottomMenuView.swift */,
+				8071F02C24A73B7C0008CA75 /* BottomMenuView.xib */,
+			);
+			path = BottomMenuView;
 			sourceTree = "<group>";
 		};
 		80792F5D235AEF120078E0AE /* PlatformAdapter */ = {
@@ -903,6 +925,7 @@
 				8091C7B0239BD389001E7A1F /* World.mwm in Resources */,
 				8091C7B2239BD389001E7A1F /* synonyms.txt in Resources */,
 				8091C777239BD301001E7A1F /* categories_cuisines.txt in Resources */,
+				8071F02D24A73B7C0008CA75 /* BottomMenuView.xib in Resources */,
 				8091C7A5239BD338001E7A1F /* resources-hdpi_dark in Resources */,
 				8091C75A239BD287001E7A1F /* 05_khmeros.ttf in Resources */,
 				8091C7A2239BD338001E7A1F /* resources-mdpi_dark in Resources */,
@@ -954,6 +977,7 @@
 			files = (
 				80AC96C123643C6C00347AFF /* IosOGLContext.mm in Sources */,
 				8046A0DA249CA43200D5D4F6 /* FirstLaunchChecker.swift in Sources */,
+				8071F02B24A73B5C0008CA75 /* BottomMenuView.swift in Sources */,
 				8069911F23F84326003682FE /* SceneDelegate.swift in Sources */,
 				809570042356193800B2F0A5 /* AppDelegate.swift in Sources */,
 				804AF88C248E63A2002E126E /* CRZLocationManager.mm in Sources */,
