@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomMenuView" customModule="Cruizla" customModuleProvider="target">
             <connections>
+                <outlet property="compassImageView" destination="apD-V5-4X7" id="FJj-Yh-b6d"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="hGX-Ar-Z57"/>
+                <outlet property="locationImageView" destination="Qj5-q0-6S6" id="uDk-az-i90"/>
+                <outlet property="menuImageView" destination="hj2-dc-TqO" id="9dt-01-sb0"/>
                 <outlet property="searchImageView" destination="q5R-qX-Ehr" id="4jx-gg-8io"/>
             </connections>
         </placeholder>
@@ -53,7 +56,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLU-nc-Peb" userLabel="Compass View">
                             <rect key="frame" x="86" y="0.0" width="86" height="64"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safari" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="apD-V5-4X7">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safari" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="apD-V5-4X7" userLabel="Compass Image View">
                                     <rect key="frame" x="23" y="12.5" width="40" height="39"/>
                                     <color key="tintColor" name="Button Normal Color"/>
                                     <constraints>
@@ -61,17 +64,27 @@
                                         <constraint firstAttribute="height" constant="40" id="VVN-Mo-eNy"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-Ac-aIj" userLabel="Compass Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
+                                    <connections>
+                                        <action selector="compassButtonTapped:" destination="-1" eventType="touchUpInside" id="05m-fB-xtV"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="J05-Ac-aIj" firstAttribute="leading" secondItem="SLU-nc-Peb" secondAttribute="leading" id="BAb-R2-N52"/>
                                 <constraint firstItem="apD-V5-4X7" firstAttribute="centerY" secondItem="SLU-nc-Peb" secondAttribute="centerY" id="UYs-s4-lSa"/>
+                                <constraint firstItem="J05-Ac-aIj" firstAttribute="top" secondItem="SLU-nc-Peb" secondAttribute="top" id="ZiY-gf-2I1"/>
                                 <constraint firstItem="apD-V5-4X7" firstAttribute="centerX" secondItem="SLU-nc-Peb" secondAttribute="centerX" id="dFS-qj-mgB"/>
+                                <constraint firstAttribute="bottom" secondItem="J05-Ac-aIj" secondAttribute="bottom" id="f4M-oX-tuO"/>
+                                <constraint firstAttribute="trailing" secondItem="J05-Ac-aIj" secondAttribute="trailing" id="pov-Qa-VQM"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-V2-gxH" userLabel="Location View">
                             <rect key="frame" x="172" y="0.0" width="86" height="64"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-q0-6S6">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-q0-6S6" userLabel="Location Image View">
                                     <rect key="frame" x="23" y="12.5" width="40" height="39"/>
                                     <color key="tintColor" name="Button Normal Color"/>
                                     <constraints>
@@ -79,17 +92,27 @@
                                         <constraint firstAttribute="height" constant="40" id="n4S-rR-fBG"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-Ld-uJ2" userLabel="Location Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
+                                    <connections>
+                                        <action selector="locationButtonTapped:" destination="-1" eventType="touchUpInside" id="QfD-PD-yyw"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerY" secondItem="HLX-V2-gxH" secondAttribute="centerY" id="FSE-28-0g6"/>
+                                <constraint firstAttribute="bottom" secondItem="dIO-Ld-uJ2" secondAttribute="bottom" id="Fun-az-BwY"/>
+                                <constraint firstAttribute="trailing" secondItem="dIO-Ld-uJ2" secondAttribute="trailing" id="MzR-H3-nMB"/>
+                                <constraint firstItem="dIO-Ld-uJ2" firstAttribute="leading" secondItem="HLX-V2-gxH" secondAttribute="leading" id="gft-oV-Pwa"/>
                                 <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerX" secondItem="HLX-V2-gxH" secondAttribute="centerX" id="rew-dP-xbq"/>
+                                <constraint firstItem="dIO-Ld-uJ2" firstAttribute="top" secondItem="HLX-V2-gxH" secondAttribute="top" id="wQC-Mk-TXi"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d75-hG-3D3" userLabel="Menu View">
                             <rect key="frame" x="258" y="0.0" width="86" height="64"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-dc-TqO">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-dc-TqO" userLabel="Menu Image View">
                                     <rect key="frame" x="23" y="17" width="40" height="30.5"/>
                                     <color key="tintColor" name="Button Normal Color"/>
                                     <constraints>
@@ -97,11 +120,21 @@
                                         <constraint firstAttribute="width" constant="40" id="eTp-lU-p1F"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-WL-zkA" userLabel="Menu Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
+                                    <connections>
+                                        <action selector="menuButtonTapped:" destination="-1" eventType="touchUpInside" id="0Dr-D7-0If"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="KrA-WL-zkA" firstAttribute="top" secondItem="d75-hG-3D3" secondAttribute="top" id="5jp-Ck-0iu"/>
                                 <constraint firstItem="hj2-dc-TqO" firstAttribute="centerX" secondItem="d75-hG-3D3" secondAttribute="centerX" id="AWA-cK-GXw"/>
+                                <constraint firstItem="KrA-WL-zkA" firstAttribute="leading" secondItem="d75-hG-3D3" secondAttribute="leading" id="QJZ-dk-ty5"/>
                                 <constraint firstItem="hj2-dc-TqO" firstAttribute="centerY" secondItem="d75-hG-3D3" secondAttribute="centerY" id="als-ZA-LFS"/>
+                                <constraint firstAttribute="bottom" secondItem="KrA-WL-zkA" secondAttribute="bottom" id="g1a-8U-f5o"/>
+                                <constraint firstAttribute="trailing" secondItem="KrA-WL-zkA" secondAttribute="trailing" id="uvH-vZ-1ty"/>
                             </constraints>
                         </view>
                     </subviews>

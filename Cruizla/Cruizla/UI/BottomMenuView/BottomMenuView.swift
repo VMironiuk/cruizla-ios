@@ -14,6 +14,9 @@ class BottomMenuView: UIView {
   
   @IBOutlet private var contentView: UIView!
   @IBOutlet weak var searchImageView: UIImageView!
+  @IBOutlet weak var compassImageView: UIImageView!
+  @IBOutlet weak var locationImageView: UIImageView!
+  @IBOutlet weak var menuImageView: UIImageView!
   
   // MARK: - Lifecycle
   
@@ -29,6 +32,16 @@ class BottomMenuView: UIView {
   
   @IBAction func searchButtonTapped(_ sender: UIButton) {
     self.highlightImageView(self.searchImageView)
+  }
+  
+  @IBAction func compassButtonTapped(_ sender: UIButton) {
+  }
+  
+  @IBAction func locationButtonTapped(_ sender: UIButton) {
+  }
+  
+  @IBAction func menuButtonTapped(_ sender: UIButton) {
+    self.highlightImageView(self.menuImageView)
   }
   
   // MARK: - Private
