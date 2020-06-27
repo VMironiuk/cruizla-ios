@@ -13,6 +13,7 @@ class BottomMenuView: UIView {
   // MARK: - Properties
   
   @IBOutlet private var contentView: UIView!
+  @IBOutlet weak var searchImageView: UIImageView!
   
   // MARK: - Lifecycle
   
@@ -26,6 +27,10 @@ class BottomMenuView: UIView {
     self.commonInit()
   }
   
+  @IBAction func searchButtonTapped(_ sender: UIButton) {
+    self.highlightImageView(self.searchImageView)
+  }
+  
   // MARK: - Private
   
   private func commonInit() {
@@ -34,5 +39,12 @@ class BottomMenuView: UIView {
     Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)
     self.contentView.frame = self.bounds
     self.addSubview(self.contentView)
+  }
+  
+  private func highlightImageView(_ imageView: UIImageView) {
+    imageView.tintColor = .customButtonHighlighted
+    UIView.animate(withDuration: 1.25, delay: 0, options: .curveEaseOut, animations: {
+      imageView.tintColor = .customButtonNormal
+    }, completion: nil)
   }
 }
