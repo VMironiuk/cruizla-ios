@@ -124,6 +124,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bottomMenuView" destination="FFH-zW-y3s" id="Phd-Bf-k0R"/>
                         <outlet property="mapView" destination="pUa-DQ-UwB" id="Rl7-su-150"/>
                     </connections>
                 </viewController>

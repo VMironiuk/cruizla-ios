@@ -13,12 +13,14 @@ class MapViewController: UIViewController {
   // MARK: - Properties
   
   @IBOutlet weak var mapView: EAGLView!
+  @IBOutlet private weak var bottomMenuView: BottomMenuView!
   
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.mapView.setPresentAvailable(true)
+    self.bottomMenuView.delegate = self
   }
   
   override func viewDidLayoutSubviews() {
@@ -138,13 +140,13 @@ class MapViewController: UIViewController {
   @objc private func onProcessUserPositionModeNotFollowNotification(
     _ notification: NSNotification)
   {
-    print("CRZ_LOGGER: \(#function)")
+    self.bottomMenuView.isLocationFollowed = false
   }
 
   @objc private func onProcessUserPositionModeFollowNotification(
     _ notification: NSNotification)
   {
-    print("CRZ_LOGGER: \(#function)")
+    self.bottomMenuView.isLocationFollowed = true
   }
 
   @objc private func onProcessUserPositionModeFollowAndRotateNotification(
@@ -154,3 +156,22 @@ class MapViewController: UIViewController {
   }
 }
 
+// MARK: - BottomMenuViewDelegate
+
+extension MapViewController: BottomMenuViewDelegate {
+  func bottomMenuViewDidTapSearchButton(_ bottomMenuView: BottomMenuView) {
+    print("CRZ_LOGGER: \(#function)")
+  }
+  
+  func bottomMenuViewDidTapCompassButton(_ bottomMenuView: BottomMenuView) {
+    print("CRZ_LOGGER: \(#function)")
+  }
+  
+  func bottomMenuViewDidTapLocationButton(_ bottomMenuView: BottomMenuView) {
+    CRZFramework.shared().switchMyPositionNextMode()
+  }
+  
+  func bottomMenuViewDidTapMenuButton(_ bottomMenuView: BottomMenuView) {
+    print("CRZ_LOGGER: \(#function)")
+  }
+}
