@@ -38,9 +38,11 @@ class BottomMenuView: UIView {
       if self.isLocationFollowed == true {
         self.locationButton.isEnabled = false
         self.locationImageView.image = UIImage(systemName: "location")
+        self.locationImageView.alpha = 0.5
       } else {
         self.locationButton.isEnabled = true
         self.locationImageView.image = UIImage(systemName: "scope")
+        self.locationImageView.alpha = 1.0
       }
     }
   }
