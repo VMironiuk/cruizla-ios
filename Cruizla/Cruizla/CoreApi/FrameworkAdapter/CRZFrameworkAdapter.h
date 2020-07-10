@@ -12,10 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CRZFrameworkAdapter : NSObject
 
+/**
+ 
+ */
 + (instancetype)sharedFramework;
 
+/**
+ 
+ */
 - (void)switchMyPositionNextMode;
 
 @end
+
+extern NSNotificationName const CRZFrameworkUserPositionModePendingPositionNotification;
+extern NSNotificationName const CRZFrameworkUserPositionModeNotFollowNoPositionNotification;
+extern NSNotificationName const CRZFrameworkUserPositionModeNotFollowNotification;
+extern NSNotificationName const CRZFrameworkUserPositionModeFollowNotification;
+extern NSNotificationName const CRZFrameworkUserPositionModeFollowAndRotateNotification;
 
 NS_ASSUME_NONNULL_END

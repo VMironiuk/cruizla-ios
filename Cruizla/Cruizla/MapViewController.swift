@@ -19,7 +19,6 @@ class MapViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.mapView.setPresentAvailable(true)
-    self.registerNotifications()
   }
   
   override func viewDidLayoutSubviews() {
@@ -32,6 +31,8 @@ class MapViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
+    self.registerNotifications()
+    
     let firstLaunchChecker = FirstLaunchChecker(
       userDefaults: .standard,
       key: K.UserDefaultsKey.firstLaunchKey)
@@ -39,6 +40,11 @@ class MapViewController: UIViewController {
     if firstLaunchChecker.isFirstLaunch {
       CRZFrameworkAdapter.sharedFramework().switchMyPositionNextMode()
     }
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    self.unregisterNotifications()
   }
   
   // MARK: - Private
@@ -63,18 +69,88 @@ class MapViewController: UIViewController {
       selector: #selector(onSceneWillDeactivateNotification(_:)),
       name: UIScene.willDeactivateNotification,
       object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(onProcessUserPositionModePendingPositionNotification(_:)),
+      name: NSNotification.Name.CRZFrameworkUserPositionModePendingPosition,
+      object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(onProcessUserPositionModeNotFollowNoPositionNotification(_:)),
+      name: NSNotification.Name.CRZFrameworkUserPositionModeNotFollowNoPosition,
+      object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(onProcessUserPositionModeNotFollowNotification(_:)),
+      name: NSNotification.Name.CRZFrameworkUserPositionModeNotFollow,
+      object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(onProcessUserPositionModeFollowNotification(_:)),
+      name: NSNotification.Name.CRZFrameworkUserPositionModeFollow,
+      object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(onProcessUserPositionModeFollowAndRotateNotification(_:)),
+      name: NSNotification.Name.CRZFrameworkUserPositionModeFollowAndRotate,
+      object: nil)
   }
   
-  @objc private func onSceneDidDisconnectNotification(_ notification: NSNotification) {
+  private func unregisterNotifications() {
+    NotificationCenter.default.removeObserver(self)
+  }
+  
+  @objc private func onSceneDidDisconnectNotification(
+    _ notification: NSNotification)
+  {
     self.mapView.deallocateNative()
   }
   
-  @objc private func onSceneDidActivateNotification(_ notification: NSNotification) {
+  @objc private func onSceneDidActivateNotification(
+    _ notification: NSNotification)
+  {
     self.mapView.setPresentAvailable(true)
   }
 
-  @objc private func onSceneWillDeactivateNotification(_ notification: NSNotification) {
+  @objc private func onSceneWillDeactivateNotification(
+    _ notification: NSNotification)
+  {
     self.mapView.setPresentAvailable(false)
+  }
+  
+  @objc private func onProcessUserPositionModePendingPositionNotification(
+    _ notification: NSNotification)
+  {
+    print("CRZ_LOGGER: \(#function)")
+  }
+  
+  @objc private func onProcessUserPositionModeNotFollowNoPositionNotification(
+    _ notification: NSNotification)
+  {
+    print("CRZ_LOGGER: \(#function)")
+  }
+
+  @objc private func onProcessUserPositionModeNotFollowNotification(
+    _ notification: NSNotification)
+  {
+    print("CRZ_LOGGER: \(#function)")
+  }
+
+  @objc private func onProcessUserPositionModeFollowNotification(
+    _ notification: NSNotification)
+  {
+    print("CRZ_LOGGER: \(#function)")
+  }
+
+  @objc private func onProcessUserPositionModeFollowAndRotateNotification(
+    _ notification: NSNotification)
+  {
+    print("CRZ_LOGGER: \(#function)")
   }
 }
 

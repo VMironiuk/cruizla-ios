@@ -12,9 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CRZLocationManager : NSObject
 
+/**
+ 
+ */
 + (instancetype)sharedManager;
 
+/**
+ 
+ */
 - (void)start;
+
+/**
+ 
+ */
 - (void)stop;
 
 @end
