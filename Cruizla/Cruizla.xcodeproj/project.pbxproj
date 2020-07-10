@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 803625A1232D1A0200EF4EC3 /* CRZPlatformAdapter.mm */; };
+		803625A2232D1A0200EF4EC3 /* CRZPlatform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 803625A1232D1A0200EF4EC3 /* CRZPlatform.mm */; };
 		803625A5232D22B800EF4EC3 /* libpartners_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625A4232D22B800EF4EC3 /* libpartners_api.a */; };
 		803625A7232D22C300EF4EC3 /* libdrape.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625A6232D22C300EF4EC3 /* libdrape.a */; };
 		803625A9232D22CF00EF4EC3 /* libshaders.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625A8232D22CF00EF4EC3 /* libshaders.a */; };
@@ -172,8 +172,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		803625A0232D1A0200EF4EC3 /* CRZPlatformAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZPlatformAdapter.h; sourceTree = "<group>"; };
-		803625A1232D1A0200EF4EC3 /* CRZPlatformAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZPlatformAdapter.mm; sourceTree = "<group>"; };
+		803625A0232D1A0200EF4EC3 /* CRZPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZPlatform.h; sourceTree = "<group>"; };
+		803625A1232D1A0200EF4EC3 /* CRZPlatform.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZPlatform.mm; sourceTree = "<group>"; };
 		803625A4232D22B800EF4EC3 /* libpartners_api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpartners_api.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		803625A6232D22C300EF4EC3 /* libdrape.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libdrape.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		803625A8232D22CF00EF4EC3 /* libshaders.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libshaders.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -586,8 +586,8 @@
 		80792F5D235AEF120078E0AE /* PlatformAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				803625A0232D1A0200EF4EC3 /* CRZPlatformAdapter.h */,
-				803625A1232D1A0200EF4EC3 /* CRZPlatformAdapter.mm */,
+				803625A0232D1A0200EF4EC3 /* CRZPlatform.h */,
+				803625A1232D1A0200EF4EC3 /* CRZPlatform.mm */,
 			);
 			path = PlatformAdapter;
 			sourceTree = "<group>";
@@ -987,7 +987,7 @@
 				804AF88C248E63A2002E126E /* CRZLocationManager.mm in Sources */,
 				80AC96BE23643B9400347AFF /* IosOGLContextFactory.mm in Sources */,
 				808B4DCE236D9934000D2DD8 /* Framework.cpp in Sources */,
-				803625A2232D1A0200EF4EC3 /* CRZPlatformAdapter.mm in Sources */,
+				803625A2232D1A0200EF4EC3 /* CRZPlatform.mm in Sources */,
 				8069912123F84344003682FE /* MapViewController.swift in Sources */,
 				8046A0D8249C98FB00D5D4F6 /* CRZFramework.mm in Sources */,
 				806D638624A63D5800D3331A /* CALayer.swift in Sources */,

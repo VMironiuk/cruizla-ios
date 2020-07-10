@@ -4,5 +4,5 @@
 
 #import "CRZFramework.h"
 #import "CRZLocationManager.h"
-#import "CRZPlatformAdapter.h"
+#import "CRZPlatform.h"
 #import "EAGLView.h"

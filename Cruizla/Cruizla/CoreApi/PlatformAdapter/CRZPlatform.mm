@@ -1,16 +1,16 @@
 //
-//  CRZPlatformAdapter.mm
+//  CRZPlatform.mm
 //  Cruizla
 //
 //  Created by Vladimir Mironiuk on 9/14/19.
 //  Copyright © 2019 Vladimir Mironiuk. All rights reserved.
 //
 
-#import "CRZPlatformAdapter.h"
+#import "CRZPlatform.h"
 
 #include "platform/platform.hpp"
 
-@implementation CRZPlatformAdapter
+@implementation CRZPlatform
 
 + (NSUInteger)cpuCoresCount {
   return GetPlatform().CpuCores();
