@@ -1,26 +1,26 @@
 //
-//  CRZFrameworkAdapter.m
+//  CRZFramework.m
 //  Cruizla
 //
 //  Created by Vladimir Mironiuk on 19.06.2020.
 //  Copyright © 2020 Vladimir Mironiuk. All rights reserved.
 //
 
-#import "CRZFrameworkAdapter.h"
+#import "CRZFramework.h"
 
 #include "Framework.h"
 
 #include "platform/location.hpp"
 
-@implementation CRZFrameworkAdapter
+@implementation CRZFramework
 
 #pragma mark - Lifecycle
 
 + (instancetype)sharedFramework {
-  static CRZFrameworkAdapter* framework = nil;
+  static CRZFramework* framework = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    framework = [[CRZFrameworkAdapter alloc] init];
+    framework = [[CRZFramework alloc] init];
   });
   return framework;
 }

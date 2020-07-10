@@ -1,5 +1,5 @@
 //
-//  CRZFrameworkAdapter.h
+//  CRZFramework.h
 //  Cruizla
 //
 //  Created by Vladimir Mironiuk on 19.06.2020.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CRZFrameworkAdapter : NSObject
+@interface CRZFramework : NSObject
 
 /**
  
