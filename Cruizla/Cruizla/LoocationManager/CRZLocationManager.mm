@@ -95,8 +95,8 @@ static location::GpsInfo gpsInfoFromLocation(CLLocation * l, location::TLocation
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray<CLLocation *> *)locations {
   auto& f = GetFramework();
-  auto locationSourse = location::TLocationSource::EAppleNative;
-  location::GpsInfo const gpsInfo = gpsInfoFromLocation([locations lastObject], locationSourse);
+  auto locationSource = location::TLocationSource::EAppleNative;
+  location::GpsInfo const gpsInfo = gpsInfoFromLocation([locations lastObject], locationSource);
   f.OnLocationUpdate(gpsInfo);
 }
 

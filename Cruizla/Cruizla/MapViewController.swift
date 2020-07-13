@@ -39,8 +39,9 @@ class MapViewController: UIViewController {
       userDefaults: .standard,
       key: K.UserDefaultsKey.firstLaunchKey)
     
+    let framework = CRZFramework.shared()
     if firstLaunchChecker.isFirstLaunch {
-      CRZFramework.shared().switchMyPositionNextMode()
+      framework.switchMyPositionNextMode()
     }
   }
   
