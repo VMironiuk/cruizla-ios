@@ -23,7 +23,8 @@ class BottomMenuView: UIView {
   
   @IBOutlet private weak var searchImageView: UIImageView!
   @IBOutlet private weak var compassImageView: UIImageView!
-  @IBOutlet private weak var locationImageView: UIImageView!
+  @IBOutlet private weak var followLocationImageView: UIImageView!
+  @IBOutlet private weak var notFollowLocationImageView: UIImageView!
   @IBOutlet private weak var menuImageView: UIImageView!
   
   @IBOutlet private weak var searchButton: UIButton!
@@ -37,12 +38,22 @@ class BottomMenuView: UIView {
     didSet {
       if self.isLocationFollowed == true {
         self.locationButton.isEnabled = false
-        self.locationImageView.image = UIImage(systemName: "location")
-        self.locationImageView.alpha = 0.5
+        self.followLocationImageView.isHidden = false
+        UIView.animate(withDuration: 0.3, animations: {
+          self.followLocationImageView.alpha = 0.5
+          self.notFollowLocationImageView.alpha = 0.0
+        }) { _ in
+          self.notFollowLocationImageView.isHidden = true
+        }
       } else {
         self.locationButton.isEnabled = true
-        self.locationImageView.image = UIImage(systemName: "scope")
-        self.locationImageView.alpha = 1.0
+        self.notFollowLocationImageView.isHidden = false
+        UIView.animate(withDuration: 0.3, animations: {
+          self.notFollowLocationImageView.alpha = 1.0
+          self.followLocationImageView.alpha = 0.0
+        }) { _ in
+          self.followLocationImageView.isHidden = true
+        }
       }
     }
   }
