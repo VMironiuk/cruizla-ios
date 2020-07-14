@@ -141,13 +141,13 @@ class MapViewController: UIViewController {
   @objc private func onProcessUserPositionModeNotFollowNotification(
     _ notification: NSNotification)
   {
-    self.bottomMenuView.isLocationFollowed = false
+    self.bottomMenuView.locationStatus = .notFollow
   }
 
   @objc private func onProcessUserPositionModeFollowNotification(
     _ notification: NSNotification)
   {
-    self.bottomMenuView.isLocationFollowed = true
+    self.bottomMenuView.locationStatus = .follow
   }
 
   @objc private func onProcessUserPositionModeFollowAndRotateNotification(

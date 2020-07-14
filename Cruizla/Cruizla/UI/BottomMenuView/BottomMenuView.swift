@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum LocationStatus {
+  case follow
+  case notFollow
+}
+
 protocol BottomMenuViewDelegate: NSObjectProtocol {
   func bottomMenuViewDidTapSearchButton(_ bottomMenuView: BottomMenuView)
   func bottomMenuViewDidTapCompassButton(_ bottomMenuView: BottomMenuView)
@@ -34,26 +39,13 @@ class BottomMenuView: UIView {
   
   weak var delegate: BottomMenuViewDelegate?
   
-  var isLocationFollowed: Bool = true {
+  var locationStatus: LocationStatus = .follow {
     didSet {
-      if self.isLocationFollowed == true {
-        self.locationButton.isEnabled = false
-        self.followLocationImageView.isHidden = false
-        UIView.animate(withDuration: 0.3, animations: {
-          self.followLocationImageView.alpha = 0.5
-          self.notFollowLocationImageView.alpha = 0.0
-        }) { _ in
-          self.notFollowLocationImageView.isHidden = true
-        }
-      } else {
-        self.locationButton.isEnabled = true
-        self.notFollowLocationImageView.isHidden = false
-        UIView.animate(withDuration: 0.3, animations: {
-          self.notFollowLocationImageView.alpha = 1.0
-          self.followLocationImageView.alpha = 0.0
-        }) { _ in
-          self.followLocationImageView.isHidden = true
-        }
+      switch self.locationStatus {
+      case .follow:
+        self.updateUIForLocationFollowStatus()
+      case .notFollow:
+        self.updateUIForLocationNotFollowStatus()
       }
     }
   }
@@ -103,5 +95,29 @@ class BottomMenuView: UIView {
     UIView.animate(withDuration: 1.25, delay: 0, options: .curveEaseOut, animations: {
       imageView.tintColor = .customButtonNormal
     }, completion: nil)
+  }
+  
+  private func updateUIForLocationFollowStatus() {
+    self.locationButton.isEnabled = false
+    self.followLocationImageView.isHidden = false
+    
+    UIView.animate(withDuration: 0.3, animations: {
+      self.followLocationImageView.alpha = 0.5
+      self.notFollowLocationImageView.alpha = 0.0
+    }) { _ in
+      self.notFollowLocationImageView.isHidden = true
+    }
+  }
+  
+  private func updateUIForLocationNotFollowStatus() {
+    self.locationButton.isEnabled = true
+    self.notFollowLocationImageView.isHidden = false
+    
+    UIView.animate(withDuration: 0.3, animations: {
+      self.notFollowLocationImageView.alpha = 1.0
+      self.followLocationImageView.alpha = 0.0
+    }) { _ in
+      self.followLocationImageView.isHidden = true
+    }
   }
 }
