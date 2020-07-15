@@ -129,7 +129,7 @@ class MapViewController: UIViewController {
   @objc private func onProcessUserPositionModePendingPositionNotification(
     _ notification: NSNotification)
   {
-    print("CRZ_LOGGER: \(#function)")
+    self.bottomMenuView.locationStatus = .pending
   }
   
   @objc private func onProcessUserPositionModeNotFollowNoPositionNotification(

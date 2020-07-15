@@ -11,6 +11,7 @@ import UIKit
 enum LocationStatus {
   case follow
   case notFollow
+  case pending
 }
 
 protocol BottomMenuViewDelegate: NSObjectProtocol {
@@ -30,6 +31,7 @@ class BottomMenuView: UIView {
   @IBOutlet private weak var compassImageView: UIImageView!
   @IBOutlet private weak var followLocationImageView: UIImageView!
   @IBOutlet private weak var notFollowLocationImageView: UIImageView!
+  @IBOutlet private weak var pendingLocationImageView: UIImageView!
   @IBOutlet private weak var menuImageView: UIImageView!
   
   @IBOutlet private weak var searchButton: UIButton!
@@ -46,6 +48,8 @@ class BottomMenuView: UIView {
         self.updateUIForLocationFollowStatus()
       case .notFollow:
         self.updateUIForLocationNotFollowStatus()
+      case .pending:
+        self.updateUIForLocationPendingStatus()
       }
     }
   }
@@ -100,24 +104,21 @@ class BottomMenuView: UIView {
   private func updateUIForLocationFollowStatus() {
     self.locationButton.isEnabled = false
     self.followLocationImageView.isHidden = false
-    
-    UIView.animate(withDuration: 0.3, animations: {
-      self.followLocationImageView.alpha = 0.5
-      self.notFollowLocationImageView.alpha = 0.0
-    }) { _ in
-      self.notFollowLocationImageView.isHidden = true
-    }
+    self.notFollowLocationImageView.isHidden = true
+    self.pendingLocationImageView.isHidden = true
   }
   
   private func updateUIForLocationNotFollowStatus() {
     self.locationButton.isEnabled = true
     self.notFollowLocationImageView.isHidden = false
-    
-    UIView.animate(withDuration: 0.3, animations: {
-      self.notFollowLocationImageView.alpha = 1.0
-      self.followLocationImageView.alpha = 0.0
-    }) { _ in
-      self.followLocationImageView.isHidden = true
-    }
+    self.followLocationImageView.isHidden = true
+    self.pendingLocationImageView.isHidden = true
+  }
+  
+  private func updateUIForLocationPendingStatus() {
+    self.locationButton.isEnabled = false
+    self.pendingLocationImageView.isHidden = false
+    self.followLocationImageView.isHidden = true
+    self.notFollowLocationImageView.isHidden = true
   }
 }

@@ -18,12 +18,13 @@
                 <outlet property="menuButton" destination="KrA-WL-zkA" id="uYZ-zR-YeQ"/>
                 <outlet property="menuImageView" destination="hj2-dc-TqO" id="9dt-01-sb0"/>
                 <outlet property="notFollowLocationImageView" destination="UXa-eg-hcO" id="Xhj-Zc-CoN"/>
+                <outlet property="pendingLocationImageView" destination="Kv7-WX-8uy" id="O1h-Zk-w7r"/>
                 <outlet property="searchButton" destination="lAn-NJ-Xqg" id="9BB-bM-XRS"/>
                 <outlet property="searchImageView" destination="q5R-qX-Ehr" id="4jx-gg-8io"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" propertyAccessControl="none">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" propertyAccessControl="all">
             <rect key="frame" x="0.0" y="0.0" width="360" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -89,6 +90,10 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-V2-gxH" userLabel="Location View">
                             <rect key="frame" x="172" y="0.0" width="86" height="64"/>
                             <subviews>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kv7-WX-8uy" userLabel="Pending Location Image View">
+                                    <rect key="frame" x="23" y="12.5" width="40" height="39"/>
+                                    <color key="tintColor" name="Button Normal Color"/>
+                                </imageView>
                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-eg-hcO" userLabel="Not Follow Location Image View">
                                     <rect key="frame" x="23" y="10.5" width="40" height="42.5"/>
                                     <color key="tintColor" name="Button Normal Color"/>
@@ -116,7 +121,11 @@
                                 <constraint firstAttribute="bottom" secondItem="dIO-Ld-uJ2" secondAttribute="bottom" id="Fun-az-BwY"/>
                                 <constraint firstItem="UXa-eg-hcO" firstAttribute="leading" secondItem="Qj5-q0-6S6" secondAttribute="leading" id="I51-jt-KtA"/>
                                 <constraint firstAttribute="trailing" secondItem="dIO-Ld-uJ2" secondAttribute="trailing" id="MzR-H3-nMB"/>
+                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="leading" secondItem="Qj5-q0-6S6" secondAttribute="leading" id="QGd-eP-lYt"/>
                                 <constraint firstItem="dIO-Ld-uJ2" firstAttribute="leading" secondItem="HLX-V2-gxH" secondAttribute="leading" id="gft-oV-Pwa"/>
+                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="trailing" secondItem="Qj5-q0-6S6" secondAttribute="trailing" id="gqH-rX-Vhu"/>
+                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="top" secondItem="Qj5-q0-6S6" secondAttribute="top" id="l37-Og-oo4"/>
+                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="bottom" secondItem="Qj5-q0-6S6" secondAttribute="bottom" id="lCe-6O-Nwh"/>
                                 <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerX" secondItem="HLX-V2-gxH" secondAttribute="centerX" id="rew-dP-xbq"/>
                                 <constraint firstItem="UXa-eg-hcO" firstAttribute="top" secondItem="Qj5-q0-6S6" secondAttribute="top" id="w41-HS-kq1"/>
                                 <constraint firstItem="dIO-Ld-uJ2" firstAttribute="top" secondItem="HLX-V2-gxH" secondAttribute="top" id="wQC-Mk-TXi"/>
@@ -190,6 +199,7 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="location" catalog="system" width="128" height="115"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="p.circle" catalog="system" width="128" height="121"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <image name="scope" catalog="system" width="128" height="122"/>
         <namedColor name="Bottom Menu View Color">
