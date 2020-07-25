@@ -22,6 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)switchMyPositionNextMode;
 
+/**
+ 
+ */
+- (void)zoomIn;
+
+/**
+ 
+ */
+- (void)zoomOut;
+
 @end
 
 extern NSNotificationName const CRZFrameworkUserPositionModePendingPositionNotification;

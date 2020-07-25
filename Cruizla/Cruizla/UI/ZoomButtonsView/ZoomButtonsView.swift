@@ -26,6 +26,16 @@ class ZoomButtonsView: UIView {
     self.commonInit()
   }
   
+  // MARK: - Actions
+  
+  @IBAction func zoomInButtonTapped(_ sender: UIButton) {
+    CRZFramework.shared().zoomIn()
+  }
+  
+  @IBAction func zoomOutButtonTapped(_ sender: UIButton) {
+    CRZFramework.shared().zoomOut()
+  }
+  
   // MARK: - Private
   
   private func commonInit() {

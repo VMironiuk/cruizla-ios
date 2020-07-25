@@ -43,6 +43,9 @@
                                     <size key="value" width="0.0" height="0.0"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="zoomInButtonTapped:" destination="-1" eventType="touchUpInside" id="MtG-sV-1dG"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfU-Mv-G15" userLabel="Zoom Out Button">
                             <rect key="frame" x="0.0" y="58" width="50" height="50"/>
@@ -66,6 +69,9 @@
                                     <size key="value" width="0.0" height="0.0"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="zoomOutButtonTapped:" destination="-1" eventType="touchUpInside" id="ywU-j6-hJu"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

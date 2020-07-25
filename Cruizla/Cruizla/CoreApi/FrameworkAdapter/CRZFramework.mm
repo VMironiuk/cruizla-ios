@@ -38,6 +38,14 @@
   GetFramework().SwitchMyPositionNextMode();
 }
 
+- (void)zoomIn {
+  GetFramework().Scale(Framework::SCALE_MAG, true);
+}
+
+- (void)zoomOut {
+  GetFramework().Scale(Framework::SCALE_MIN, true);
+}
+
 #pragma mark - Private
 
 - (void)p_setupFrameworkListeners {
