@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8027617124C9C588009D8DB5 /* ZoomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8027617024C9C588009D8DB5 /* ZoomButtonsView.swift */; };
+		8027617324C9C5C4009D8DB5 /* ZoomButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8027617224C9C5C4009D8DB5 /* ZoomButtonsView.xib */; };
 		803625A2232D1A0200EF4EC3 /* CRZPlatform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 803625A1232D1A0200EF4EC3 /* CRZPlatform.mm */; };
 		803625A5232D22B800EF4EC3 /* libpartners_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625A4232D22B800EF4EC3 /* libpartners_api.a */; };
 		803625A7232D22C300EF4EC3 /* libdrape.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 803625A6232D22C300EF4EC3 /* libdrape.a */; };
@@ -172,6 +174,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8027617024C9C588009D8DB5 /* ZoomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButtonsView.swift; sourceTree = "<group>"; };
+		8027617224C9C5C4009D8DB5 /* ZoomButtonsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoomButtonsView.xib; sourceTree = "<group>"; };
 		803625A0232D1A0200EF4EC3 /* CRZPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRZPlatform.h; sourceTree = "<group>"; };
 		803625A1232D1A0200EF4EC3 /* CRZPlatform.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CRZPlatform.mm; sourceTree = "<group>"; };
 		803625A4232D22B800EF4EC3 /* libpartners_api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpartners_api.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -459,6 +463,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8027616F24C9C543009D8DB5 /* ZoomButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				8027617024C9C588009D8DB5 /* ZoomButtonsView.swift */,
+				8027617224C9C5C4009D8DB5 /* ZoomButtonsView.xib */,
+			);
+			path = ZoomButtonsView;
+			sourceTree = "<group>";
+		};
 		802CF97F2449A52D008041B7 /* CoreApi */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				8071F02924A73B1F0008CA75 /* BottomMenuView */,
+				8027616F24C9C543009D8DB5 /* ZoomButtonsView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -905,6 +919,7 @@
 				8091C798239BD338001E7A1F /* resources-xxxhdpi_dark in Resources */,
 				8091C783239BD301001E7A1F /* classificator.txt in Resources */,
 				8091C79F239BD338001E7A1F /* resources-6plus_clear in Resources */,
+				8027617324C9C5C4009D8DB5 /* ZoomButtonsView.xib in Resources */,
 				8091C786239BD301001E7A1F /* categories.txt in Resources */,
 				8091C778239BD301001E7A1F /* countries.txt in Resources */,
 				8091C785239BD301001E7A1F /* drules_proto_vehicle_clear.bin in Resources */,
@@ -993,6 +1008,7 @@
 				806D638624A63D5800D3331A /* CALayer.swift in Sources */,
 				80AC96B82364350E00347AFF /* EAGLView.mm in Sources */,
 				8046A0DF249CA85300D5D4F6 /* Constants.swift in Sources */,
+				8027617124C9C588009D8DB5 /* ZoomButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

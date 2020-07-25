@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -17,7 +17,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUa-DQ-UwB" customClass="EAGLView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-zW-y3s" userLabel="Bottom Menu View" customClass="BottomMenuView" customModule="Cruizla" customModuleProvider="target">
                                 <rect key="frame" x="8" y="690" width="359" height="80"/>
@@ -60,16 +60,29 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZp-x0-igB" userLabel="Zoom Buttons View" customClass="ZoomButtonsView" customModule="Cruizla" customModuleProvider="target">
+                                <rect key="frame" x="317" y="352" width="50" height="108"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="UMF-QC-T44"/>
+                                    <constraint firstAttribute="width" constant="50" id="Xwe-OC-mwC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GZp-x0-igB" secondAttribute="trailing" constant="8" id="0Gm-AJ-2Q4"/>
                             <constraint firstItem="pUa-DQ-UwB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5NW-yC-k3t"/>
+                            <constraint firstItem="GZp-x0-igB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6CL-1B-y7P"/>
                             <constraint firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="CFN-gh-BLc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="DPM-ZW-aT0"/>
                             <constraint firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="EvD-aB-eSb"/>
                             <constraint firstItem="FFH-zW-y3s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="K3H-2p-wle"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GZp-x0-igB" secondAttribute="trailing" constant="8" id="Ojc-Dd-UFW"/>
                             <constraint firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="RgP-RX-Yuu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFH-zW-y3s" secondAttribute="trailing" constant="8" id="Ufq-o8-pHR"/>
+                            <constraint firstItem="GZp-x0-igB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="WwF-7f-EIJ"/>
+                            <constraint firstItem="GZp-x0-igB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Xhj-4j-iYJ"/>
                             <constraint firstItem="FFH-zW-y3s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Zpp-9e-rxQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FFH-zW-y3s" secondAttribute="bottom" constant="8" id="bdG-h4-LfL"/>
                             <constraint firstAttribute="trailing" secondItem="pUa-DQ-UwB" secondAttribute="trailing" id="cT3-6a-Q7j"/>
@@ -82,10 +95,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="0Gm-AJ-2Q4"/>
                                 <exclude reference="DPM-ZW-aT0"/>
+                                <exclude reference="Ojc-Dd-UFW"/>
                                 <exclude reference="Ufq-o8-pHR"/>
                                 <exclude reference="bdG-h4-LfL"/>
                                 <exclude reference="se7-JW-wlq"/>
+                                <exclude reference="WwF-7f-EIJ"/>
+                                <exclude reference="Xhj-4j-iYJ"/>
                                 <exclude reference="CFN-gh-BLc"/>
                                 <exclude reference="EvD-aB-eSb"/>
                                 <exclude reference="K3H-2p-wle"/>
@@ -98,6 +115,7 @@
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Ufq-o8-pHR"/>
+                                <include reference="WwF-7f-EIJ"/>
                                 <include reference="K3H-2p-wle"/>
                                 <include reference="RgP-RX-Yuu"/>
                             </mask>
@@ -105,12 +123,14 @@
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
                                 <include reference="DPM-ZW-aT0"/>
+                                <include reference="Xhj-4j-iYJ"/>
                                 <include reference="EvD-aB-eSb"/>
                                 <include reference="rXc-Tt-VhC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="Ojc-Dd-UFW"/>
                                 <include reference="se7-JW-wlq"/>
                                 <include reference="Zpp-9e-rxQ"/>
                                 <include reference="fvQ-P7-0xg"/>
@@ -118,6 +138,7 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="0Gm-AJ-2Q4"/>
                                 <include reference="bdG-h4-LfL"/>
                                 <include reference="CFN-gh-BLc"/>
                             </mask>
