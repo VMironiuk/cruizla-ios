@@ -61,11 +61,11 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZp-x0-igB" userLabel="Zoom Buttons View" customClass="ZoomButtonsView" customModule="Cruizla" customModuleProvider="target">
-                                <rect key="frame" x="317" y="352" width="50" height="108"/>
+                                <rect key="frame" x="311" y="342" width="56" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="UMF-QC-T44"/>
-                                    <constraint firstAttribute="width" constant="50" id="Xwe-OC-mwC"/>
+                                    <constraint firstAttribute="height" constant="128" id="UMF-QC-T44"/>
+                                    <constraint firstAttribute="width" constant="56" id="Xwe-OC-mwC"/>
                                 </constraints>
                             </view>
                         </subviews>
