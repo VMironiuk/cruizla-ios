@@ -10,6 +10,8 @@
 
 #include "Framework.h"
 
+#include "geometry/screenbase.hpp"
+
 #include "platform/location.hpp"
 
 @implementation CRZFramework
@@ -66,6 +68,10 @@
   f.SetMyPositionPendingTimeoutListener([self] () {
     [self p_processUserPositionPendingTimeout];
   });
+  
+  f.SetViewportListener([self](const ScreenBase& screen){
+    [self p_processViewportAngleChanged:screen.GetAngle()];
+  });
 }
 
 - (void)p_mapObjectSelected {
@@ -109,8 +115,15 @@
   NSLog(@"CRZ_LOGGER: %s", __PRETTY_FUNCTION__);
 }
 
+- (void)p_processViewportAngleChanged:(double)angle {
+  [[NSNotificationCenter defaultCenter]
+   postNotificationName:CRZFrameworkViewportAngleChangedNotification object:self
+   userInfo:@{@"angle": [NSNumber numberWithDouble:angle]}];
+}
+
 @end
 
+// Position mode notification names
 NSNotificationName const CRZFrameworkUserPositionModePendingPositionNotification =
   @"CRZFrameworkUserPositionModePendingPositionNotification";
 NSNotificationName const CRZFrameworkUserPositionModeNotFollowNoPositionNotification =
@@ -121,3 +134,7 @@ NSNotificationName const CRZFrameworkUserPositionModeFollowNotification =
   @"CRZFrameworkUserPositionModeFollowNotification";
 NSNotificationName const CRZFrameworkUserPositionModeFollowAndRotateNotification =
   @"CRZFrameworkUserPositionModeFollowAndRotateNotification";
+
+// Viewport angle change notification name
+NSNotificationName const CRZFrameworkViewportAngleChangedNotification=
+  @"CRZFrameworkViewportAngleChangedNotification";

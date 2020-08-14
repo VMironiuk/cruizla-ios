@@ -75,6 +75,12 @@ class BottomMenuView: UIView {
     self.delegate?.bottomMenuViewDidTapMenuButton(self)
   }
   
+  // MARK: - Public
+  
+  func processRotation(angle: Double) {
+    self.compassButton.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+  }
+  
   // MARK: - Private
   
   private func commonInit() {

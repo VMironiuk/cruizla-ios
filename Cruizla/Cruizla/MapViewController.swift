@@ -102,6 +102,12 @@ class MapViewController: UIViewController {
       selector: #selector(onProcessUserPositionModeFollowAndRotateNotification(_:)),
       name: NSNotification.Name.CRZFrameworkUserPositionModeFollowAndRotate,
       object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(onProcessViewportAngleChangedNotification(_:)),
+      name: NSNotification.Name.CRZFrameworkViewportAngleChanged,
+      object: nil)
   }
   
   private func unregisterNotifications() {
@@ -154,6 +160,14 @@ class MapViewController: UIViewController {
     _ notification: NSNotification)
   {
     print("CRZ_LOGGER: \(#function)")
+  }
+  
+  @objc private func onProcessViewportAngleChangedNotification(
+    _ notification: NSNotification)
+  {
+    if let number = notification.userInfo?["angle"] as? NSNumber {
+      self.bottomMenuView.processRotation(angle: number.doubleValue)
+    }
   }
 }
 

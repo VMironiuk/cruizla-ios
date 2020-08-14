@@ -34,10 +34,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+// Position mode notification names
 extern NSNotificationName const CRZFrameworkUserPositionModePendingPositionNotification;
 extern NSNotificationName const CRZFrameworkUserPositionModeNotFollowNoPositionNotification;
 extern NSNotificationName const CRZFrameworkUserPositionModeNotFollowNotification;
 extern NSNotificationName const CRZFrameworkUserPositionModeFollowNotification;
 extern NSNotificationName const CRZFrameworkUserPositionModeFollowAndRotateNotification;
+
+// Viewport angle change notification name
+extern NSNotificationName const CRZFrameworkViewportAngleChangedNotification;
 
 NS_ASSUME_NONNULL_END
