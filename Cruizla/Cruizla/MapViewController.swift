@@ -179,7 +179,7 @@ extension MapViewController: BottomMenuViewDelegate {
   }
   
   func bottomMenuViewDidTapCompassButton(_ bottomMenuView: BottomMenuView) {
-    print("CRZ_LOGGER: \(#function)")
+    CRZFramework.shared().compassTapped()
   }
   
   func bottomMenuViewDidTapLocationButton(_ bottomMenuView: BottomMenuView) {

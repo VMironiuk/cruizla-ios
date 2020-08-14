@@ -59,6 +59,8 @@ class BottomMenuView: UIView {
     self.commonInit()
   }
   
+  // MARK: - Actions
+  
   @IBAction func searchButtonTapped(_ sender: UIButton) {
     self.delegate?.bottomMenuViewDidTapSearchButton(self)
   }

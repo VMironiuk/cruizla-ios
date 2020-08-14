@@ -42,7 +42,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
                             </state>
                             <connections>
-                                <action selector="compassButtonTapped:" destination="-1" eventType="touchUpInside" id="05m-fB-xtV"/>
+                                <action selector="compassButtonTapped:" destination="-1" eventType="touchUpInside" id="9s5-gH-5YI"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-Ld-uJ2" userLabel="Location Button">

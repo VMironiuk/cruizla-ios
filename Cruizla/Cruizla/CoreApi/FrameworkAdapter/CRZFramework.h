@@ -32,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)zoomOut;
 
+/**
+ 
+ */
+- (void)compassTapped;
+
 @end
 
 // Position mode notification names

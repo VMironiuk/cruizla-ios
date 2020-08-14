@@ -48,6 +48,10 @@
   GetFramework().Scale(Framework::SCALE_MIN, true);
 }
 
+- (void)compassTapped {
+  GetFramework().GetDrapeEngine()->OnCompassTapped();
+}
+
 #pragma mark - Private
 
 - (void)p_setupFrameworkListeners {
