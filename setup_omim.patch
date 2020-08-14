@@ -69,8 +69,57 @@ index 02062cfbb8..2c9443453b 100644
    case VK_RESULT_MAX_ENUM: return "VK_RESULT_MAX_ENUM";
    }
    UNREACHABLE();
+diff --git a/drape_frontend/drape_engine.cpp b/drape_frontend/drape_engine.cpp
+index 43dd97b0f6..6a9904f525 100644
+--- a/drape_frontend/drape_engine.cpp
++++ b/drape_frontend/drape_engine.cpp
+@@ -990,4 +990,9 @@ void DrapeEngine::UpdateMyPositionRoutingOffset(bool useDefault, int offsetY)
+                                   make_unique_dp<UpdateMyPositionRoutingOffsetMessage>(useDefault, offsetY),
+                                   MessagePriority::Normal);
+ }
++
++void DrapeEngine::OnCompassTapped() const
++{
++  m_frontend->OnCompassTapped();
++}
+ }  // namespace df
+diff --git a/drape_frontend/drape_engine.hpp b/drape_frontend/drape_engine.hpp
+index fd628bd67b..0980dc8051 100644
+--- a/drape_frontend/drape_engine.hpp
++++ b/drape_frontend/drape_engine.hpp
+@@ -259,6 +259,8 @@ public:
+ 
+   void UpdateVisualScale(double vs, bool needStopRendering);
+   void UpdateMyPositionRoutingOffset(bool useDefault, int offsetY);
++  
++  void OnCompassTapped() const;
+ 
+ private:
+   void AddUserEvent(drape_ptr<UserEvent> && e);
+diff --git a/drape_frontend/frontend_renderer.hpp b/drape_frontend/frontend_renderer.hpp
+index 92e008430d..d68d4ea411 100755
+--- a/drape_frontend/frontend_renderer.hpp
++++ b/drape_frontend/frontend_renderer.hpp
+@@ -146,6 +146,8 @@ public:
+                        m2::PointD const & pxZero, TAnimationCreator const & parallelAnimCreator) override;
+ 
+   drape_ptr<ScenarioManager> const & GetScenarioManager() const;
++  
++  void OnCompassTapped();
+ 
+ protected:
+   void AcceptMessage(ref_ptr<Message> message) override;
+@@ -264,8 +266,6 @@ private:
+   bool CheckTileGenerations(TileKey const & tileKey);
+   void UpdateCanBeDeletedStatus();
+ 
+-  void OnCompassTapped();
+-
+   FeatureID GetVisiblePOI(m2::PointD const & pixelPoint);
+   FeatureID GetVisiblePOI(m2::RectD const & pixelRect);
+ 
 diff --git a/xcode/common.xcconfig b/xcode/common.xcconfig
-index 2587517989..9a142dc7e1 100644
+index 687d30ff13..2e20530880 100644
 --- a/xcode/common.xcconfig
 +++ b/xcode/common.xcconfig
 @@ -5,6 +5,10 @@ OMIM_ROOT = $(PROJECT_DIR)/../..
