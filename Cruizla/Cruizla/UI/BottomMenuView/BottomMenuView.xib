@@ -38,7 +38,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-Ac-aIj" userLabel="Compass Button">
                             <rect key="frame" x="86" y="0.0" width="86" height="48"/>
                             <color key="tintColor" name="Button Normal Color"/>
-                            <state key="normal" image="location.north.line.fill" catalog="system">
+                            <state key="normal" image="CompassButton">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
                             </state>
                             <connections>
@@ -102,9 +102,9 @@
         </view>
     </objects>
     <resources>
+        <image name="CompassButton" width="40" height="40"/>
         <image name="MenuButon" width="40" height="40"/>
         <image name="location" catalog="system" width="128" height="115"/>
-        <image name="location.north.line.fill" catalog="system" width="82" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="Bottom Menu View Color">
             <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
