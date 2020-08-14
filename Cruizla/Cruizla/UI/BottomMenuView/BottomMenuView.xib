@@ -11,154 +11,60 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomMenuView" customModule="Cruizla" customModuleProvider="target">
             <connections>
                 <outlet property="compassButton" destination="J05-Ac-aIj" id="ReZ-E0-ZMz"/>
-                <outlet property="compassImageView" destination="apD-V5-4X7" id="FJj-Yh-b6d"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="hGX-Ar-Z57"/>
-                <outlet property="followLocationImageView" destination="Qj5-q0-6S6" id="uDk-az-i90"/>
                 <outlet property="locationButton" destination="dIO-Ld-uJ2" id="M59-rv-siQ"/>
                 <outlet property="menuButton" destination="KrA-WL-zkA" id="uYZ-zR-YeQ"/>
-                <outlet property="menuImageView" destination="hj2-dc-TqO" id="9dt-01-sb0"/>
-                <outlet property="notFollowLocationImageView" destination="UXa-eg-hcO" id="Xhj-Zc-CoN"/>
-                <outlet property="pendingLocationImageView" destination="Kv7-WX-8uy" id="O1h-Zk-w7r"/>
                 <outlet property="searchButton" destination="lAn-NJ-Xqg" id="9BB-bM-XRS"/>
-                <outlet property="searchImageView" destination="q5R-qX-Ehr" id="4jx-gg-8io"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" propertyAccessControl="all">
-            <rect key="frame" x="0.0" y="0.0" width="360" height="80"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" propertyAccessControl="none">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nXK-Tm-oSm">
-                    <rect key="frame" x="8" y="8" width="344" height="64"/>
+                    <rect key="frame" x="8" y="8" width="344" height="48"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HL-7b-AK8" userLabel="Search View">
-                            <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q5R-qX-Ehr" userLabel="Search Inage View">
-                                    <rect key="frame" x="23" y="13" width="40" height="38"/>
-                                    <color key="tintColor" name="Button Normal Color"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="1Yt-ly-Prq"/>
-                                        <constraint firstAttribute="height" constant="40" id="KTu-yZ-E5m"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAn-NJ-Xqg" userLabel="Search Button">
-                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
-                                    <connections>
-                                        <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="eAe-uQ-SeC"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="lAn-NJ-Xqg" secondAttribute="trailing" id="5wP-IN-X3v"/>
-                                <constraint firstItem="lAn-NJ-Xqg" firstAttribute="top" secondItem="9HL-7b-AK8" secondAttribute="top" id="e4O-Id-0eu"/>
-                                <constraint firstItem="q5R-qX-Ehr" firstAttribute="centerY" secondItem="9HL-7b-AK8" secondAttribute="centerY" id="fYv-kD-uXg"/>
-                                <constraint firstItem="lAn-NJ-Xqg" firstAttribute="leading" secondItem="9HL-7b-AK8" secondAttribute="leading" id="iv9-cn-vZy"/>
-                                <constraint firstItem="q5R-qX-Ehr" firstAttribute="centerX" secondItem="9HL-7b-AK8" secondAttribute="centerX" id="n8D-yf-Fpp"/>
-                                <constraint firstAttribute="bottom" secondItem="lAn-NJ-Xqg" secondAttribute="bottom" id="tgQ-96-VJa"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLU-nc-Peb" userLabel="Compass View">
-                            <rect key="frame" x="86" y="0.0" width="86" height="64"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safari" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="apD-V5-4X7" userLabel="Compass Image View">
-                                    <rect key="frame" x="23" y="12.5" width="40" height="39"/>
-                                    <color key="tintColor" name="Button Normal Color"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="ATw-rc-fbL"/>
-                                        <constraint firstAttribute="height" constant="40" id="VVN-Mo-eNy"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-Ac-aIj" userLabel="Compass Button">
-                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
-                                    <connections>
-                                        <action selector="compassButtonTapped:" destination="-1" eventType="touchUpInside" id="05m-fB-xtV"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="J05-Ac-aIj" firstAttribute="leading" secondItem="SLU-nc-Peb" secondAttribute="leading" id="BAb-R2-N52"/>
-                                <constraint firstItem="apD-V5-4X7" firstAttribute="centerY" secondItem="SLU-nc-Peb" secondAttribute="centerY" id="UYs-s4-lSa"/>
-                                <constraint firstItem="J05-Ac-aIj" firstAttribute="top" secondItem="SLU-nc-Peb" secondAttribute="top" id="ZiY-gf-2I1"/>
-                                <constraint firstItem="apD-V5-4X7" firstAttribute="centerX" secondItem="SLU-nc-Peb" secondAttribute="centerX" id="dFS-qj-mgB"/>
-                                <constraint firstAttribute="bottom" secondItem="J05-Ac-aIj" secondAttribute="bottom" id="f4M-oX-tuO"/>
-                                <constraint firstAttribute="trailing" secondItem="J05-Ac-aIj" secondAttribute="trailing" id="pov-Qa-VQM"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-V2-gxH" userLabel="Location View">
-                            <rect key="frame" x="172" y="0.0" width="86" height="64"/>
-                            <subviews>
-                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kv7-WX-8uy" userLabel="Pending Location Image View">
-                                    <rect key="frame" x="23" y="12.5" width="40" height="39"/>
-                                    <color key="tintColor" name="Button Normal Color"/>
-                                </imageView>
-                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-eg-hcO" userLabel="Not Follow Location Image View">
-                                    <rect key="frame" x="23" y="10.5" width="40" height="42.5"/>
-                                    <color key="tintColor" name="Button Normal Color"/>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-q0-6S6" userLabel="Follow Location Image View">
-                                    <rect key="frame" x="23" y="12.5" width="40" height="39"/>
-                                    <color key="tintColor" name="Button Normal Color"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="VPI-Hc-4N4"/>
-                                        <constraint firstAttribute="height" constant="40" id="n4S-rR-fBG"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-Ld-uJ2" userLabel="Location Button">
-                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
-                                    <connections>
-                                        <action selector="locationButtonTapped:" destination="-1" eventType="touchUpInside" id="QfD-PD-yyw"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="UXa-eg-hcO" firstAttribute="trailing" secondItem="Qj5-q0-6S6" secondAttribute="trailing" id="3At-QT-YUO"/>
-                                <constraint firstItem="UXa-eg-hcO" firstAttribute="bottom" secondItem="Qj5-q0-6S6" secondAttribute="bottom" id="3qu-Kq-eKc"/>
-                                <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerY" secondItem="HLX-V2-gxH" secondAttribute="centerY" id="FSE-28-0g6"/>
-                                <constraint firstAttribute="bottom" secondItem="dIO-Ld-uJ2" secondAttribute="bottom" id="Fun-az-BwY"/>
-                                <constraint firstItem="UXa-eg-hcO" firstAttribute="leading" secondItem="Qj5-q0-6S6" secondAttribute="leading" id="I51-jt-KtA"/>
-                                <constraint firstAttribute="trailing" secondItem="dIO-Ld-uJ2" secondAttribute="trailing" id="MzR-H3-nMB"/>
-                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="leading" secondItem="Qj5-q0-6S6" secondAttribute="leading" id="QGd-eP-lYt"/>
-                                <constraint firstItem="dIO-Ld-uJ2" firstAttribute="leading" secondItem="HLX-V2-gxH" secondAttribute="leading" id="gft-oV-Pwa"/>
-                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="trailing" secondItem="Qj5-q0-6S6" secondAttribute="trailing" id="gqH-rX-Vhu"/>
-                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="top" secondItem="Qj5-q0-6S6" secondAttribute="top" id="l37-Og-oo4"/>
-                                <constraint firstItem="Kv7-WX-8uy" firstAttribute="bottom" secondItem="Qj5-q0-6S6" secondAttribute="bottom" id="lCe-6O-Nwh"/>
-                                <constraint firstItem="Qj5-q0-6S6" firstAttribute="centerX" secondItem="HLX-V2-gxH" secondAttribute="centerX" id="rew-dP-xbq"/>
-                                <constraint firstItem="UXa-eg-hcO" firstAttribute="top" secondItem="Qj5-q0-6S6" secondAttribute="top" id="w41-HS-kq1"/>
-                                <constraint firstItem="dIO-Ld-uJ2" firstAttribute="top" secondItem="HLX-V2-gxH" secondAttribute="top" id="wQC-Mk-TXi"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d75-hG-3D3" userLabel="Menu View">
-                            <rect key="frame" x="258" y="0.0" width="86" height="64"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuButon" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-dc-TqO" userLabel="Menu Image View">
-                                    <rect key="frame" x="23" y="12" width="40" height="40"/>
-                                    <color key="tintColor" name="Button Normal Color"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="Yn0-vx-Aed"/>
-                                        <constraint firstAttribute="width" constant="40" id="eTp-lU-p1F"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-WL-zkA" userLabel="Menu Button">
-                                    <rect key="frame" x="0.0" y="0.0" width="86" height="64"/>
-                                    <connections>
-                                        <action selector="menuButtonTapped:" destination="-1" eventType="touchUpInside" id="0Dr-D7-0If"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="KrA-WL-zkA" firstAttribute="top" secondItem="d75-hG-3D3" secondAttribute="top" id="5jp-Ck-0iu"/>
-                                <constraint firstItem="hj2-dc-TqO" firstAttribute="centerX" secondItem="d75-hG-3D3" secondAttribute="centerX" id="AWA-cK-GXw"/>
-                                <constraint firstItem="KrA-WL-zkA" firstAttribute="leading" secondItem="d75-hG-3D3" secondAttribute="leading" id="QJZ-dk-ty5"/>
-                                <constraint firstItem="hj2-dc-TqO" firstAttribute="centerY" secondItem="d75-hG-3D3" secondAttribute="centerY" id="als-ZA-LFS"/>
-                                <constraint firstAttribute="bottom" secondItem="KrA-WL-zkA" secondAttribute="bottom" id="g1a-8U-f5o"/>
-                                <constraint firstAttribute="trailing" secondItem="KrA-WL-zkA" secondAttribute="trailing" id="uvH-vZ-1ty"/>
-                            </constraints>
-                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAn-NJ-Xqg" userLabel="Search Button">
+                            <rect key="frame" x="0.0" y="0.0" width="86" height="48"/>
+                            <color key="tintColor" name="Button Normal Color"/>
+                            <state key="normal" image="magnifyingglass" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
+                            </state>
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="eAe-uQ-SeC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-Ac-aIj" userLabel="Compass Button">
+                            <rect key="frame" x="86" y="0.0" width="86" height="48"/>
+                            <color key="tintColor" name="Button Normal Color"/>
+                            <state key="normal" image="location.north.line.fill" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
+                            </state>
+                            <connections>
+                                <action selector="compassButtonTapped:" destination="-1" eventType="touchUpInside" id="05m-fB-xtV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIO-Ld-uJ2" userLabel="Location Button">
+                            <rect key="frame" x="172" y="0.0" width="86" height="48"/>
+                            <color key="tintColor" name="Button Normal Color"/>
+                            <state key="normal" image="location" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
+                            </state>
+                            <connections>
+                                <action selector="locationButtonTapped:" destination="-1" eventType="touchUpInside" id="QfD-PD-yyw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-WL-zkA" userLabel="Menu Button">
+                            <rect key="frame" x="258" y="0.0" width="86" height="48"/>
+                            <color key="tintColor" name="Button Normal Color"/>
+                            <state key="normal" image="MenuButon">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
+                            </state>
+                            <connections>
+                                <action selector="menuButtonTapped:" destination="-1" eventType="touchUpInside" id="0Dr-D7-0If"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                     <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
@@ -177,7 +83,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                    <integer key="value" value="20"/>
+                    <integer key="value" value="16"/>
                 </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColorIB">
                     <color key="value" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -198,15 +104,13 @@
     <resources>
         <image name="MenuButon" width="40" height="40"/>
         <image name="location" catalog="system" width="128" height="115"/>
-        <image name="location.slash" catalog="system" width="128" height="115"/>
+        <image name="location.north.line.fill" catalog="system" width="82" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="safari" catalog="system" width="128" height="121"/>
-        <image name="scope" catalog="system" width="128" height="122"/>
         <namedColor name="Bottom Menu View Color">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Button Normal Color">
-            <color red="0.4392156862745098" green="0.42352941176470588" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.43900001049041748" green="0.42399999499320984" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

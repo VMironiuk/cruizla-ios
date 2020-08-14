@@ -20,14 +20,14 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-zW-y3s" userLabel="Bottom Menu View" customClass="BottomMenuView" customModule="Cruizla" customModuleProvider="target">
-                                <rect key="frame" x="8" y="690" width="359" height="80"/>
+                                <rect key="frame" x="8" y="706" width="359" height="64"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="1Bm-vt-UH3"/>
-                                    <constraint firstAttribute="height" constant="80" id="2oM-o5-ncm"/>
-                                    <constraint firstAttribute="height" constant="80" id="FUf-0N-mJz"/>
+                                    <constraint firstAttribute="width" constant="64" id="1Bm-vt-UH3"/>
+                                    <constraint firstAttribute="height" constant="64" id="2oM-o5-ncm"/>
+                                    <constraint firstAttribute="height" constant="64" id="FUf-0N-mJz"/>
                                     <constraint firstAttribute="width" constant="360" id="PyQ-vX-IYA"/>
-                                    <constraint firstAttribute="width" constant="80" id="s3X-R3-BYK"/>
+                                    <constraint firstAttribute="width" constant="64" id="s3X-R3-BYK"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">

@@ -27,13 +27,6 @@ class BottomMenuView: UIView {
   
   @IBOutlet private var contentView: UIView!
   
-  @IBOutlet private weak var searchImageView: UIImageView!
-  @IBOutlet private weak var compassImageView: UIImageView!
-  @IBOutlet private weak var followLocationImageView: UIImageView!
-  @IBOutlet private weak var notFollowLocationImageView: UIImageView!
-  @IBOutlet private weak var pendingLocationImageView: UIImageView!
-  @IBOutlet private weak var menuImageView: UIImageView!
-  
   @IBOutlet private weak var searchButton: UIButton!
   @IBOutlet private weak var compassButton: UIButton!
   @IBOutlet private weak var locationButton: UIButton!
@@ -67,7 +60,6 @@ class BottomMenuView: UIView {
   }
   
   @IBAction func searchButtonTapped(_ sender: UIButton) {
-    self.highlightImageView(self.searchImageView)
     self.delegate?.bottomMenuViewDidTapSearchButton(self)
   }
   
@@ -80,7 +72,6 @@ class BottomMenuView: UIView {
   }
   
   @IBAction func menuButtonTapped(_ sender: UIButton) {
-    self.highlightImageView(self.menuImageView)
     self.delegate?.bottomMenuViewDidTapMenuButton(self)
   }
   
@@ -103,22 +94,16 @@ class BottomMenuView: UIView {
   
   private func updateUIForLocationFollowStatus() {
     self.locationButton.isEnabled = false
-    self.followLocationImageView.isHidden = false
-    self.notFollowLocationImageView.isHidden = true
-    self.pendingLocationImageView.isHidden = true
+    self.locationButton.setImage(UIImage(systemName: "location"), for: .normal)
   }
   
   private func updateUIForLocationNotFollowStatus() {
     self.locationButton.isEnabled = true
-    self.notFollowLocationImageView.isHidden = false
-    self.followLocationImageView.isHidden = true
-    self.pendingLocationImageView.isHidden = true
+    self.locationButton.setImage(UIImage(systemName: "scope"), for: .normal)
   }
   
   private func updateUIForLocationPendingStatus() {
     self.locationButton.isEnabled = false
-    self.pendingLocationImageView.isHidden = false
-    self.followLocationImageView.isHidden = true
-    self.notFollowLocationImageView.isHidden = true
+    self.locationButton.setImage(UIImage(systemName: "location.slash"), for: .normal)
   }
 }
