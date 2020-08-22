@@ -6,7 +6,7 @@
 //  Copyright © 2020 Vladimir Mironiuk. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 - (void)compassTapped;
+
+/**
+ 
+ */
+- (void)setVisibleViewport:(CGRect)rect scaleFactor:(CGFloat)scale;
 
 @end
 

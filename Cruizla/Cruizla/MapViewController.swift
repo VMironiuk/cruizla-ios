@@ -50,6 +50,13 @@ class MapViewController: UIViewController {
     self.unregisterNotifications()
   }
   
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    CRZFramework.shared().setVisibleViewport(
+      self.view.bounds,
+      scaleFactor: self.mapView.contentScaleFactor)
+  }
+  
   // MARK: - Private
   
   // MARK: - Notifications Handling
